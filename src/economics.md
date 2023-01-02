@@ -1,6 +1,8 @@
-# Economics
+# Экономика
 
-This chapter shall be an opinionated interpretation of the status quo and what we expect to acheive with Encointer.
+Эта глава является уверенной интерпретацией статуса-кво и того, чего мы ожидаем достичь с помощью Encointer.
+
+
 
 
 
