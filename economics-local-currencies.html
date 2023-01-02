@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Local Currencies - </title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="introduction.html">Introduction</a></li><li class="expanded "><a href="economics.html"><strong aria-hidden="true">1.</strong> Economics</a></li><li><ol class="section"><li class="expanded "><a href="economics-cantillon.html"><strong aria-hidden="true">1.1.</strong> The Cantillon Effect</a></li><li class="expanded "><a href="economics-ubi.html"><strong aria-hidden="true">1.2.</strong> Universal Basic Income</a></li><li class="expanded "><a href="economics-demurrage.html"><strong aria-hidden="true">1.3.</strong> Demurrage</a></li><li class="expanded "><a href="economics-local-currencies.html" class="active"><strong aria-hidden="true">1.4.</strong> Local Currencies</a></li><li class="expanded "><a href="economics-interest.html"><strong aria-hidden="true">1.5.</strong> On Saving, Loans and Interest</a></li></ol></li><li class="expanded "><a href="ssi.html"><strong aria-hidden="true">2.</strong> Self-Sovereign Identity</a></li><li class="expanded "><a href="protocol.html"><strong aria-hidden="true">3.</strong> The Encointer Protocol</a></li><li><ol class="section"><li class="expanded "><a href="protocol-ceremony-cycle.html"><strong aria-hidden="true">3.1.</strong> Ceremony Cycle</a></li><li class="expanded "><a href="protocol-reputation.html"><strong aria-hidden="true">3.2.</strong> Reputation</a></li><li class="expanded "><a href="protocol-cid.html"><strong aria-hidden="true">3.3.</strong> Community Identifiers</a></li><li class="expanded "><a href="protocol-democracy.html"><strong aria-hidden="true">3.4.</strong> Democracy</a></li><li class="expanded "><a href="protocol-threat-model.html"><strong aria-hidden="true">3.5.</strong> Threat Model</a></li></ol></li><li class="expanded "><a href="decentralization.html"><strong aria-hidden="true">4.</strong> Decentralization</a></li><li><ol class="section"><li class="expanded "><a href="decentralization-governance.html"><strong aria-hidden="true">4.1.</strong> Governance</a></li></ol></li><li class="expanded "><a href="deployments.html"><strong aria-hidden="true">5.</strong> Deployments</a></li><li><ol class="section"><li class="expanded "><a href="testnet-gesell.html"><strong aria-hidden="true">5.1.</strong> Gesell</a></li><li class="expanded "><a href="testnet-cantillon.html"><strong aria-hidden="true">5.2.</strong> Cantillon</a></li><li class="expanded "><a href="parachain-kusama.html"><strong aria-hidden="true">5.3.</strong> Encointer Kusama Parachain</a></li></ol></li><li class="expanded "><a href="bazaar.html"><strong aria-hidden="true">6.</strong> Bazaar</a></li><li class="expanded "><a href="app.html"><strong aria-hidden="true">7.</strong> App</a></li><li><ol class="section"><li class="expanded "><a href="app-select-community.html"><strong aria-hidden="true">7.1.</strong> Select Community</a></li><li class="expanded "><a href="app-register.html"><strong aria-hidden="true">7.2.</strong> Register for a ceremony</a></li><li class="expanded "><a href="app-meetup.html"><strong aria-hidden="true">7.3.</strong> Perfrom a Ceremony Meetup</a></li></ol></li><li class="expanded "><a href="explorer.html"><strong aria-hidden="true">8.</strong> Explorer</a></li><li class="expanded "><a href="tutorials.html"><strong aria-hidden="true">9.</strong> Tutorials</a></li><li><ol class="section"><li class="expanded "><a href="tutorials-cli.html"><strong aria-hidden="true">9.1.</strong> Basic CLI usage</a></li><li class="expanded "><a href="tutorials-register-community.html"><strong aria-hidden="true">9.2.</strong> Register a New Community Manually</a></li><li class="expanded "><a href="tutorials-register-locations.html"><strong aria-hidden="true">9.3.</strong> Register new meetup locations</a></li><li class="expanded "><a href="tutorials-vouchers.html"><strong aria-hidden="true">9.4.</strong> Create vouchers</a></li><li class="expanded "><a href="tutorials-acceptance-point.html"><strong aria-hidden="true">9.5.</strong> Acceptance Point Setup</a></li></ol></li><li class="expanded "><a href="developers.html"><strong aria-hidden="true">10.</strong> Developers</a></li><li><ol class="section"><li class="expanded "><a href="developers-notee-local-setup.html"><strong aria-hidden="true">10.1.</strong> Local notee Setup</a></li><li class="expanded "><a href="developers-bot-communities.html"><strong aria-hidden="true">10.2.</strong> Bot Communities</a></li><li class="expanded "><a href="developers-notee-multi-community-growth-benchmark.html"><strong aria-hidden="true">10.3.</strong> Benchmark Multi-Community Growth</a></li><li class="expanded "><a href="developers-teeproxy-local.html"><strong aria-hidden="true">10.4.</strong> Local TEEproxy setup</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#local-currencies" id="local-currencies">Local Currencies</a></h1>
+<p>Cryptocurrencies are fundamentally global in nature. Their networks are decentralized and agnostic to national borders. But global currencies have a severe disadvantage: Their purchase value can evolve very differently in different regions. The Euro is such an example, which is the official currency in many european countries with distinct fiscal policies and economic development. While there are political reasons to favor such a unifying currency, many economists doubt the concept. States with less economic growth have no option of devaluing their national currency. They can only get into debt - and then get forced into austerity, further weakening their economy.</p>
+<p>Local currencies on the other hand are mainly affected by local economy. </p>
+<h2><a class="header" href="#classification" id="classification">Classification</a></h2>
+<p>Known examples of local currencies can be divided into <em>mutual credit</em>,  <em>local fiat currencies</em> and <em>time banks</em>.</p>
+<h3><a class="header" href="#mutual-credit" id="mutual-credit">Mutual Credit</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Mutual_credit">Mutual credit</a> is a membership based, cashless currency created by clearing positive and negative balances between members when they trade. Usually, the accounts are denominated in national currency.
+If Alice provides a service worth 100$ to Bob, Alices balance will be +100$, Bob's will be -100$. Alice can later spend her 100$ balance in a trade with Charlie, who may be interested in a service Bob provides.
+Businesses are often allowed to have negative balances in the order of their usual turnover for a few months. These schemes rely on a local authority that performs due diligence when accepting new members and bans defaulters.</p>
+<p>Examples are barter networks like <em>Talent</em> or business exchange networks like <em>WIR</em>, <em>RES</em>.</p>
+<p>Mutual credit usually comes with high transaction costs. You might not always find the product you are looking for and it may be challenging to accept such currency for payment if you don't know where to spend it later.</p>
+<p>In an economic environment of deflation, when there is a shortage of money because banks are reluctant to issue credits, mutual credit has shown to be of great value [1]. But when there's an abundance of money, these networks are unattractive and they generally don't further Encointer's goal of reducing inequality.</p>
+<h3><a class="header" href="#local-fiat-currencies" id="local-fiat-currencies">Local Fiat Currencies</a></h3>
+<p>Currencies like Wörgl's AB Schein, Chiemgauer or Berkshares are denominated in national currency. Often they have circulating paper bills, sometimes featuring demurrage. What they all have in common: They are only circulating within a local community and are worthless elsewhere. Often, they are redeemable for national currency, sometimes subject to a small fee. Sometimes redemption is restricted to businesses.</p>
+<p>On the bottom line, such currencies can be understood as a loyalty programme promoting local spending, sometimes incentivized with discounts. They are successful in strenghtening the spirit of local community [1] and they can mitigate unemployment in an environment of deflation (Wörgl). However, due to globalization, local goods are often more expensive than imported ones. Therefore, these currencies are not attractive for poorer members of the community if they have to buy the local currency with national currency in the first place.</p>
+<p><a href="https://www.grassrootseconomics.org/community-currencies">Grassroots Economics'</a> Sarafu Credit in Kenya is a very innovative approach that shows significant social impact by empowering poor neighbourhoods by issuing money to local businesses directly. However, their concept introduces complexity, as money supply and distribution so far relies on careful engineering by experts from outside the community, for each community specifically. Moreover, Sarafu Credit is backed by donation money. While this may resemble a cash-transfer scheme, it actually isn't: Foreign capital is used as a fractional reserve for the local currency by applying <a href="https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a">bonding curves</a>.</p>
+<h3><a class="header" href="#time-banks" id="time-banks">Time Banks</a></h3>
+<p>A very egalitarian category of local currencies are time banks. They proclaim that one hour's worth of service by one human has equal value to one hour's work by any other. Mostly, they work like mutual credit currencies, with the difference that the denomination is hours instead of national currency.</p>
+<p>Examples are Blaengarw Time Centre, Dane County Time Bank</p>
+<p>While the concept of time banks has shown to increase social capital [1], in practise they feature high transaction cost and liquid matchmaking showed to be challenging. The main benefactors end up to be the same individuals that also perform well on a free market based on national money. If your service is in high demand, you will be able collect more hours than you'll be able to spend on services you desire.</p>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
+<h3><a class="header" href="#ab-schein-wörgl" id="ab-schein-wörgl">AB-Schein Wörgl</a></h3>
+<p>During the great depression, the austrian village of Wörgl attempted a monetary experiment to fight deflation: A complementary local currency.</p>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">Schilling (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by the muncipality, as partial salary for infrastructure  work</td></tr>
+<tr><td align="left">backing</td><td align="left">(full?) reserve in Schilling, provided by wealthy individuals</td></tr>
+<tr><td align="left">demurrage</td><td align="left">12% / year linear pro rata</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">2%</td></tr>
+<tr><td align="left">date</td><td align="left">1932 until prohibited in 1933</td></tr>
+</tbody></table>
+<p>Observed Impact:</p>
+<ul>
+<li>lower unemployment (-16% while elsewhere +19% in 1933)</li>
+<li>8-10x money velocity</li>
+<li>improved infrastructure: bridge, ski-jump, streets</li>
+</ul>
+<p><a href="http://userpage.fu-berlin.de/%7Eroehrigw/schmitt/text6.htm">source</a></p>
+<h3><a class="header" href="#chiemgauer" id="chiemgauer">Chiemgauer</a></h3>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">Euro (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by Chiemgau association, in exchange for Euro</td></tr>
+<tr><td align="left">backing</td><td align="left">full reserve in Euro</td></tr>
+<tr><td align="left">demurrage</td><td align="left">8% / year linear pro rata</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">5% (of which 3% go to local associations chosen by buyers of Chiemgauer)</td></tr>
+<tr><td align="left">date</td><td align="left">2003 until now</td></tr>
+</tbody></table>
+<h3><a class="header" href="#wir" id="wir">WIR</a></h3>
+<p>WIR is rather a reciprocal exchange network (barter ring) - but it is an official currency (CHW). It is only open to businesses, not private persons.</p>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">CHF (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by WIR bank as credit (with low interest rate)</td></tr>
+<tr><td align="left">backing</td><td align="left">mixed-asset backed</td></tr>
+<tr><td align="left">demurrage</td><td align="left">none</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">reimbursement prohibited, you have to spend it</td></tr>
+<tr><td align="left">date</td><td align="left">1934 until now</td></tr>
+</tbody></table>
+<p><a href="https://archive.is/20130115184645/http://www.der-arbeitsmarkt.ch/arbeitsmarkt/de/themen/archiv/101176/WIR_sind_auch_Geld">source</a></p>
+<h3><a class="header" href="#blaengarw-time-centre" id="blaengarw-time-centre">Blaengarw Time Centre</a></h3>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">hours of work</td></tr>
+<tr><td align="left">issuance</td><td align="left">reward for community work</td></tr>
+<tr><td align="left">backing</td><td align="left">community events that can be attended with time credits</td></tr>
+<tr><td align="left">demurrage</td><td align="left">none</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">no reimbursement</td></tr>
+<tr><td align="left">date</td><td align="left">2006 until now</td></tr>
+</tbody></table>
+<h2><a class="header" href="#references" id="references">References</a></h2>
+<p>[1] People Money: The Promise of Regional Currencies, Margrit Kennedy, Bernard Lietaer, John Rogers, ISBN-13: 978-1908009760, 2012</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="economics-demurrage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="economics-interest.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="economics-demurrage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="economics-interest.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

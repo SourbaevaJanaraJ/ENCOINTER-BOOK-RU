@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Universal Basic Income - </title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="introduction.html">Introduction</a></li><li class="expanded "><a href="economics.html"><strong aria-hidden="true">1.</strong> Economics</a></li><li><ol class="section"><li class="expanded "><a href="economics-cantillon.html"><strong aria-hidden="true">1.1.</strong> The Cantillon Effect</a></li><li class="expanded "><a href="economics-ubi.html" class="active"><strong aria-hidden="true">1.2.</strong> Universal Basic Income</a></li><li class="expanded "><a href="economics-demurrage.html"><strong aria-hidden="true">1.3.</strong> Demurrage</a></li><li class="expanded "><a href="economics-local-currencies.html"><strong aria-hidden="true">1.4.</strong> Local Currencies</a></li><li class="expanded "><a href="economics-interest.html"><strong aria-hidden="true">1.5.</strong> On Saving, Loans and Interest</a></li></ol></li><li class="expanded "><a href="ssi.html"><strong aria-hidden="true">2.</strong> Self-Sovereign Identity</a></li><li class="expanded "><a href="protocol.html"><strong aria-hidden="true">3.</strong> The Encointer Protocol</a></li><li><ol class="section"><li class="expanded "><a href="protocol-ceremony-cycle.html"><strong aria-hidden="true">3.1.</strong> Ceremony Cycle</a></li><li class="expanded "><a href="protocol-reputation.html"><strong aria-hidden="true">3.2.</strong> Reputation</a></li><li class="expanded "><a href="protocol-cid.html"><strong aria-hidden="true">3.3.</strong> Community Identifiers</a></li><li class="expanded "><a href="protocol-democracy.html"><strong aria-hidden="true">3.4.</strong> Democracy</a></li><li class="expanded "><a href="protocol-threat-model.html"><strong aria-hidden="true">3.5.</strong> Threat Model</a></li></ol></li><li class="expanded "><a href="decentralization.html"><strong aria-hidden="true">4.</strong> Decentralization</a></li><li><ol class="section"><li class="expanded "><a href="decentralization-governance.html"><strong aria-hidden="true">4.1.</strong> Governance</a></li></ol></li><li class="expanded "><a href="deployments.html"><strong aria-hidden="true">5.</strong> Deployments</a></li><li><ol class="section"><li class="expanded "><a href="testnet-gesell.html"><strong aria-hidden="true">5.1.</strong> Gesell</a></li><li class="expanded "><a href="testnet-cantillon.html"><strong aria-hidden="true">5.2.</strong> Cantillon</a></li><li class="expanded "><a href="parachain-kusama.html"><strong aria-hidden="true">5.3.</strong> Encointer Kusama Parachain</a></li></ol></li><li class="expanded "><a href="bazaar.html"><strong aria-hidden="true">6.</strong> Bazaar</a></li><li class="expanded "><a href="app.html"><strong aria-hidden="true">7.</strong> App</a></li><li><ol class="section"><li class="expanded "><a href="app-select-community.html"><strong aria-hidden="true">7.1.</strong> Select Community</a></li><li class="expanded "><a href="app-register.html"><strong aria-hidden="true">7.2.</strong> Register for a ceremony</a></li><li class="expanded "><a href="app-meetup.html"><strong aria-hidden="true">7.3.</strong> Perfrom a Ceremony Meetup</a></li></ol></li><li class="expanded "><a href="explorer.html"><strong aria-hidden="true">8.</strong> Explorer</a></li><li class="expanded "><a href="tutorials.html"><strong aria-hidden="true">9.</strong> Tutorials</a></li><li><ol class="section"><li class="expanded "><a href="tutorials-cli.html"><strong aria-hidden="true">9.1.</strong> Basic CLI usage</a></li><li class="expanded "><a href="tutorials-register-community.html"><strong aria-hidden="true">9.2.</strong> Register a New Community Manually</a></li><li class="expanded "><a href="tutorials-register-locations.html"><strong aria-hidden="true">9.3.</strong> Register new meetup locations</a></li><li class="expanded "><a href="tutorials-vouchers.html"><strong aria-hidden="true">9.4.</strong> Create vouchers</a></li><li class="expanded "><a href="tutorials-acceptance-point.html"><strong aria-hidden="true">9.5.</strong> Acceptance Point Setup</a></li></ol></li><li class="expanded "><a href="developers.html"><strong aria-hidden="true">10.</strong> Developers</a></li><li><ol class="section"><li class="expanded "><a href="developers-notee-local-setup.html"><strong aria-hidden="true">10.1.</strong> Local notee Setup</a></li><li class="expanded "><a href="developers-bot-communities.html"><strong aria-hidden="true">10.2.</strong> Bot Communities</a></li><li class="expanded "><a href="developers-notee-multi-community-growth-benchmark.html"><strong aria-hidden="true">10.3.</strong> Benchmark Multi-Community Growth</a></li><li class="expanded "><a href="developers-teeproxy-local.html"><strong aria-hidden="true">10.4.</strong> Local TEEproxy setup</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#universal-basic-income" id="universal-basic-income">Universal Basic Income</a></h1>
+<p>A universal basic income (UBI) is a modest amount of money paid unconditionally to individuals on a regular basis (<a href="https://www.penguin.co.uk/books/304/304706/basic-income/9780141985480.html">Standing</a>). Most advocates of UBI aim at introducing it at a national level, as a monthly income to all legal (fiscal) residents and paid out in cash (denominated in national currency). Usually, a UBI is suggested to be financed by some form of taxation. As <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674052284">Van Parijs &amp; Vanderborght</a> explain, a national UBI may lead to justice among thieves (achieving more equality within a wealthy nation while there’s staggering inequality globally). They therefore argue for a global UBI, as do <a href="http://www.worldbasicincome.org.uk/">WBI</a> or <a href="http://www.globalincome.org/">GBI</a>.</p>
+<p>Encointer aims at providing a global UBI in terms of units of cryptocurrency created on a regular basis and distributed to individuals (almost) unconditionally. Let’s examine the characteristics of such an encointer-UBI:</p>
+<h2><a class="header" href="#universal" id="universal">universal</a></h2>
+<p>Encointer is paid out to every human being able and willing to attend encointer meetus every 41 days and in posession of a smartphone. This unfortunately excludes persons with certain disabilities as well as those without a smartphone. Also, the need to travel to meetups comes at varying cost, depending on local population densities – a disadvantage to people living in remote areas. While this is not exactly unconditional, we think it is less exclusive on a global scale than introducing national UBI schemes in few wealthy nations. Moreover, encointer might promote the concept of UBI and pave the way for institutionalized national or global UBI.</p>
+<h2><a class="header" href="#basic" id="basic">basic</a></h2>
+<p>Nothing in the definition of UBI defines a specific amount. However, it is often understood to be sufficient to cover basic needs and therefore provide economic security to its beneficiaries. In order to do so, it should also be stable. Encointer is a new cryptocurrency with algorithmically defined monetary supply. Only the (global) market can define its purchasing power.
+global vs local currency</p>
+<p>Cryptocurrencies based on public unpermissioned blockchains are global by nature. Encointer is such a cryptocurrency – with the important added feature of allowing local currencies to be issued, as will be discussed below. Encointer is paid out in equal nominal amounts to every individual. Technically, there is no decentralized way of doing otherwise as the P2P network has no awareness of national borders or the cost of living. As a means for UBI this is a mixed blessing. If UBI is expected to be suffient to cover basic needs there is no way to achieve this goal with a global currency. Purchasing power of one unit of global currency would vary hugely among different regions. The upside being that the UBI’s purchasing power is in that case expected to be higher in weaker economies, therefore reducing global inequality.</p>
+<p>Because Encointer issuance involves meetups with known geolocation, it is technically feasible to issue local currencies which are algorithmically bound to high-interaction communities (though ignorant of national borders). This would allow the UBI to be denominated in a currency which is meant to be used within local ecosystems yet freely tradable globally.
+real value</p>
+<p>The purchasing power of a unit of local encointer currency is market-based. It isn’t backed by gold or trust in some nations central bank. It’s value is determined by its usefulness as a store of value, medium of transfer or unit of account. Depending on national circumstances, the usefulness of encointer can vary. Where large parts of the populations are unbanked, encointer could complement national currency because it is accessible to everyone and more convenient to use and store than cash.</p>
+<p>Another angle from which to define value could be international development aid. Encointer would allow to distribute aid to individuals living in a specified area directly by buying their local currency. It would even be possible to buy such local currency at fixed rates, thereby ensuring a stable value of that local currency. Administrative cost and misappropriation of development aid could be reduced significantly.</p>
+<h2><a class="header" href="#income" id="income">income</a></h2>
+<p>Encointer delivers an income in a fixed nominal amount of digital currency, paid (or issued) in regular intervals (for every ceremony meetup attended, happening in fixed intervals of 41 days) to all participating individuals. This income is obligation free and is given to the rich and the poor alike.</p>
+<p>This income is paid for by issuing money and therefore by nominal inflation of encointer currency. The absolute nominal inflation rate depends on the number of ceremony meetup participants. And there is a correcting factor: Demurrage!</p>
+<h2><a class="header" href="#literature" id="literature">Literature</a></h2>
+<ul>
+<li><a href="https://www.penguin.co.uk/books/304/304706/basic-income/9780141985480.html">Guy Standing, Basic Income: And How We Can Make It Happen</a></li>
+<li><a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674052284">Van Parijs &amp; Vanderborght, Basic Income – A Radical Proposal for a Free Society and a Sane Economy</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="economics-cantillon.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="economics-demurrage.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="economics-cantillon.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="economics-demurrage.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

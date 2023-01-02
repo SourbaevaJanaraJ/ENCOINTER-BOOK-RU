@@ -1,0 +1,1607 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="introduction.html">Introduction</a></li><li class="expanded "><a href="economics.html"><strong aria-hidden="true">1.</strong> Economics</a></li><li><ol class="section"><li class="expanded "><a href="economics-cantillon.html"><strong aria-hidden="true">1.1.</strong> The Cantillon Effect</a></li><li class="expanded "><a href="economics-ubi.html"><strong aria-hidden="true">1.2.</strong> Universal Basic Income</a></li><li class="expanded "><a href="economics-demurrage.html"><strong aria-hidden="true">1.3.</strong> Demurrage</a></li><li class="expanded "><a href="economics-local-currencies.html"><strong aria-hidden="true">1.4.</strong> Local Currencies</a></li><li class="expanded "><a href="economics-interest.html"><strong aria-hidden="true">1.5.</strong> On Saving, Loans and Interest</a></li></ol></li><li class="expanded "><a href="ssi.html"><strong aria-hidden="true">2.</strong> Self-Sovereign Identity</a></li><li class="expanded "><a href="protocol.html"><strong aria-hidden="true">3.</strong> The Encointer Protocol</a></li><li><ol class="section"><li class="expanded "><a href="protocol-ceremony-cycle.html"><strong aria-hidden="true">3.1.</strong> Ceremony Cycle</a></li><li class="expanded "><a href="protocol-reputation.html"><strong aria-hidden="true">3.2.</strong> Reputation</a></li><li class="expanded "><a href="protocol-cid.html"><strong aria-hidden="true">3.3.</strong> Community Identifiers</a></li><li class="expanded "><a href="protocol-democracy.html"><strong aria-hidden="true">3.4.</strong> Democracy</a></li><li class="expanded "><a href="protocol-threat-model.html"><strong aria-hidden="true">3.5.</strong> Threat Model</a></li></ol></li><li class="expanded "><a href="decentralization.html"><strong aria-hidden="true">4.</strong> Decentralization</a></li><li><ol class="section"><li class="expanded "><a href="decentralization-governance.html"><strong aria-hidden="true">4.1.</strong> Governance</a></li></ol></li><li class="expanded "><a href="deployments.html"><strong aria-hidden="true">5.</strong> Deployments</a></li><li><ol class="section"><li class="expanded "><a href="testnet-gesell.html"><strong aria-hidden="true">5.1.</strong> Gesell</a></li><li class="expanded "><a href="testnet-cantillon.html"><strong aria-hidden="true">5.2.</strong> Cantillon</a></li><li class="expanded "><a href="parachain-kusama.html"><strong aria-hidden="true">5.3.</strong> Encointer Kusama Parachain</a></li></ol></li><li class="expanded "><a href="bazaar.html"><strong aria-hidden="true">6.</strong> Bazaar</a></li><li class="expanded "><a href="app.html"><strong aria-hidden="true">7.</strong> App</a></li><li><ol class="section"><li class="expanded "><a href="app-select-community.html"><strong aria-hidden="true">7.1.</strong> Select Community</a></li><li class="expanded "><a href="app-register.html"><strong aria-hidden="true">7.2.</strong> Register for a ceremony</a></li><li class="expanded "><a href="app-meetup.html"><strong aria-hidden="true">7.3.</strong> Perfrom a Ceremony Meetup</a></li></ol></li><li class="expanded "><a href="explorer.html"><strong aria-hidden="true">8.</strong> Explorer</a></li><li class="expanded "><a href="tutorials.html"><strong aria-hidden="true">9.</strong> Tutorials</a></li><li><ol class="section"><li class="expanded "><a href="tutorials-cli.html"><strong aria-hidden="true">9.1.</strong> Basic CLI usage</a></li><li class="expanded "><a href="tutorials-register-community.html"><strong aria-hidden="true">9.2.</strong> Register a New Community Manually</a></li><li class="expanded "><a href="tutorials-register-locations.html"><strong aria-hidden="true">9.3.</strong> Register new meetup locations</a></li><li class="expanded "><a href="tutorials-vouchers.html"><strong aria-hidden="true">9.4.</strong> Create vouchers</a></li><li class="expanded "><a href="tutorials-acceptance-point.html"><strong aria-hidden="true">9.5.</strong> Acceptance Point Setup</a></li></ol></li><li class="expanded "><a href="developers.html"><strong aria-hidden="true">10.</strong> Developers</a></li><li><ol class="section"><li class="expanded "><a href="developers-notee-local-setup.html"><strong aria-hidden="true">10.1.</strong> Local notee Setup</a></li><li class="expanded "><a href="developers-bot-communities.html"><strong aria-hidden="true">10.2.</strong> Bot Communities</a></li><li class="expanded "><a href="developers-notee-multi-community-growth-benchmark.html"><strong aria-hidden="true">10.3.</strong> Benchmark Multi-Community Growth</a></li><li class="expanded "><a href="developers-teeproxy-local.html"><strong aria-hidden="true">10.4.</strong> Local TEEproxy setup</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="./fig/encointer_logo_orig.svg" alt="logo" /></p>
+<h1><a class="header" href="#Введение" id="Введение">Введение</a></h1>
+<p>Это основной ресурс описания Encointer. Работа продолжается</p>
+<p>Для более подробной информации обратитесь к техническому документу <a href="https://github.com/encointer/whitepaper/raw/master/encointer_whitepaper.pdf">whitepaper</a></p>
+<h1><a class="header" href="#Экономика" id="Экономика">Экономика</a></h1>
+<p>Эта глава является уверенной интерпретацией статуса-кво и того, чего мы ожидаем достичь с помощью Encointer.</p>
+<h1><a class="header" href="#Эффект-Кантильона" id="Эффект-Кантильона">Эффект Кантильона</a></h1>
+<p>Ричард Кантильон известный своим анализом, влияние на неравенство изменений денежного запаса в государстве. </p>
+<blockquote>
+<p>Если прирост реальных денег происходит за счет государственных золотых и серебряных запасов, то владелец рудников, предприниматели, плавильщики, аффинажеры и вообще все те, кто на них работает, увеличат свои расходы в соответствии с полученной прибылью. Они станут потреблять больше мяса, вина или пива, чем это было прежде, и принимают как должное, что у них  одежда лучше, лучшее белье, более богато украшенные дома и другие востребованные товары. Следовательно, они станут нанимать ремесленников, у которых до этого было не так много работы, и у которых по той же причине увеличатся расходы. Увеличение расходов на мясо, вино, шерсть и т. п. обязательно приводит к сокращению доли других людей в государстве, которые не являются первоначальными бенефициарами от богатств рудников. Когда спрос на мясо, вино, шерсть и т. п. выше, чем обычно, не может не привести к повышению цен на них. </p>
+</blockquote>
+<p>В настоящее время добыча золота и серебра не влияет на денежный запас. Влияют банки, которые выпускают деньги в качестве кредита - из ничего. Если интерпретировать Кантильона в наше время, мы должны заменить шахтера на банкира. Остальная часть истории все еще применима. Несмотря на количественное смягчение, мы не видим значительной инфляции цен на товары первой необходимости. Этот эффект можно объяснить, тем, что все эти вновь выпущенные деньги никогда не доходят до широких масс. </p>
+<p>Цель Encointer - инвертировать эффект Кантильона. Вместо того, чтобы выдавать деньги в виде кредита предприятиям и кредитоспособным частным лицам, мы выдаем деньги нижним слоям населения. Каждый человек получает универсальный базовый доход: свеже-выпущенные деньги.</p>
+<h1><a class="header" href="#universal-basic-income" id="universal-basic-income">Universal Basic Income</a></h1>
+<p>A universal basic income (UBI) is a modest amount of money paid unconditionally to individuals on a regular basis (<a href="https://www.penguin.co.uk/books/304/304706/basic-income/9780141985480.html">Standing</a>). Most advocates of UBI aim at introducing it at a national level, as a monthly income to all legal (fiscal) residents and paid out in cash (denominated in national currency). Usually, a UBI is suggested to be financed by some form of taxation. As <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674052284">Van Parijs &amp; Vanderborght</a> explain, a national UBI may lead to justice among thieves (achieving more equality within a wealthy nation while there’s staggering inequality globally). They therefore argue for a global UBI, as do <a href="http://www.worldbasicincome.org.uk/">WBI</a> or <a href="http://www.globalincome.org/">GBI</a>.</p>
+<p>Encointer aims at providing a global UBI in terms of units of cryptocurrency created on a regular basis and distributed to individuals (almost) unconditionally. Let’s examine the characteristics of such an encointer-UBI:</p>
+<h2><a class="header" href="#universal" id="universal">universal</a></h2>
+<p>Encointer is paid out to every human being able and willing to attend encointer meetus every 41 days and in posession of a smartphone. This unfortunately excludes persons with certain disabilities as well as those without a smartphone. Also, the need to travel to meetups comes at varying cost, depending on local population densities – a disadvantage to people living in remote areas. While this is not exactly unconditional, we think it is less exclusive on a global scale than introducing national UBI schemes in few wealthy nations. Moreover, encointer might promote the concept of UBI and pave the way for institutionalized national or global UBI.</p>
+<h2><a class="header" href="#basic" id="basic">basic</a></h2>
+<p>Nothing in the definition of UBI defines a specific amount. However, it is often understood to be sufficient to cover basic needs and therefore provide economic security to its beneficiaries. In order to do so, it should also be stable. Encointer is a new cryptocurrency with algorithmically defined monetary supply. Only the (global) market can define its purchasing power.
+global vs local currency</p>
+<p>Cryptocurrencies based on public unpermissioned blockchains are global by nature. Encointer is such a cryptocurrency – with the important added feature of allowing local currencies to be issued, as will be discussed below. Encointer is paid out in equal nominal amounts to every individual. Technically, there is no decentralized way of doing otherwise as the P2P network has no awareness of national borders or the cost of living. As a means for UBI this is a mixed blessing. If UBI is expected to be suffient to cover basic needs there is no way to achieve this goal with a global currency. Purchasing power of one unit of global currency would vary hugely among different regions. The upside being that the UBI’s purchasing power is in that case expected to be higher in weaker economies, therefore reducing global inequality.</p>
+<p>Because Encointer issuance involves meetups with known geolocation, it is technically feasible to issue local currencies which are algorithmically bound to high-interaction communities (though ignorant of national borders). This would allow the UBI to be denominated in a currency which is meant to be used within local ecosystems yet freely tradable globally.
+real value</p>
+<p>The purchasing power of a unit of local encointer currency is market-based. It isn’t backed by gold or trust in some nations central bank. It’s value is determined by its usefulness as a store of value, medium of transfer or unit of account. Depending on national circumstances, the usefulness of encointer can vary. Where large parts of the populations are unbanked, encointer could complement national currency because it is accessible to everyone and more convenient to use and store than cash.</p>
+<p>Another angle from which to define value could be international development aid. Encointer would allow to distribute aid to individuals living in a specified area directly by buying their local currency. It would even be possible to buy such local currency at fixed rates, thereby ensuring a stable value of that local currency. Administrative cost and misappropriation of development aid could be reduced significantly.</p>
+<h2><a class="header" href="#income" id="income">income</a></h2>
+<p>Encointer delivers an income in a fixed nominal amount of digital currency, paid (or issued) in regular intervals (for every ceremony meetup attended, happening in fixed intervals of 41 days) to all participating individuals. This income is obligation free and is given to the rich and the poor alike.</p>
+<p>This income is paid for by issuing money and therefore by nominal inflation of encointer currency. The absolute nominal inflation rate depends on the number of ceremony meetup participants. And there is a correcting factor: Demurrage!</p>
+<h2><a class="header" href="#literature" id="literature">Literature</a></h2>
+<ul>
+<li><a href="https://www.penguin.co.uk/books/304/304706/basic-income/9780141985480.html">Guy Standing, Basic Income: And How We Can Make It Happen</a></li>
+<li><a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674052284">Van Parijs &amp; Vanderborght, Basic Income – A Radical Proposal for a Free Society and a Sane Economy</a></li>
+</ul>
+<h1><a class="header" href="#demurrage" id="demurrage">Demurrage</a></h1>
+<p>Encointer currencies feature <a href="https://en.wikipedia.org/wiki/Demurrage_(currency)">nominal demurrage</a>: All balances get devalued over time. The funds you’re holding lose 7% of their nominal value every month. Think of this devaluation like a payment to a solidarity fund that pays for the UBI. This way, Encointer can issue monthly UBI and still maintain stable money supply as shown by the simulation in the figure below. Another advantage of demurrage has been described by <a href="https://en.wikipedia.org/wiki/Silvio_Gesell">Silvio Gesell</a> when he proposed <a href="https://en.wikipedia.org/wiki/Freigeld">Freigeld</a> in 1916: Demurrage increases money velocity, which in turn fuels the local economy.</p>
+<p><img src="./fig/ubi-vs-demurrage-balance.svg" alt="demurrage" /></p>
+<p><em>Money supply for a stationary economy with a demurrage fee of 7% per month and a population of 10’000 participants. After an initial phase, the UBI of 1 token per ceremony maintains a constant ratio to the total money supply and therefore maintains a constant real value.</em></p>
+<h2><a class="header" href="#comparison" id="comparison">Comparison</a></h2>
+<p>Demurrage is mainly known as a means to increase money velocity. Known <a href="economics-local-currencies.html">local currencies</a> have chosen demurrage to be in the range of 2-8% per year.</p>
+<p>Due to technical limitations, demurrage is often charged linearly, like 2% of the face value per quarter as in the case Chiemgauer, where demurrage is applied by stamping paper bills. Encointer has more technical freedom and charges <em>compound</em> demurrage, as a percentage of its current value. The difference between linear and compound demurrage becomes clear after 50 quarters: Your 100 Chiemgauer have cost 100€ in demurrage fees. With compound demurrage, your 100 Chiemgauer would still be worth</p>
+<p>100€ * (1-0.02)^50 = 36.42€</p>
+<h1><a class="header" href="#local-currencies" id="local-currencies">Local Currencies</a></h1>
+<p>Cryptocurrencies are fundamentally global in nature. Their networks are decentralized and agnostic to national borders. But global currencies have a severe disadvantage: Their purchase value can evolve very differently in different regions. The Euro is such an example, which is the official currency in many european countries with distinct fiscal policies and economic development. While there are political reasons to favor such a unifying currency, many economists doubt the concept. States with less economic growth have no option of devaluing their national currency. They can only get into debt - and then get forced into austerity, further weakening their economy.</p>
+<p>Local currencies on the other hand are mainly affected by local economy. </p>
+<h2><a class="header" href="#classification" id="classification">Classification</a></h2>
+<p>Known examples of local currencies can be divided into <em>mutual credit</em>,  <em>local fiat currencies</em> and <em>time banks</em>.</p>
+<h3><a class="header" href="#mutual-credit" id="mutual-credit">Mutual Credit</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Mutual_credit">Mutual credit</a> is a membership based, cashless currency created by clearing positive and negative balances between members when they trade. Usually, the accounts are denominated in national currency.
+If Alice provides a service worth 100$ to Bob, Alices balance will be +100$, Bob's will be -100$. Alice can later spend her 100$ balance in a trade with Charlie, who may be interested in a service Bob provides.
+Businesses are often allowed to have negative balances in the order of their usual turnover for a few months. These schemes rely on a local authority that performs due diligence when accepting new members and bans defaulters.</p>
+<p>Examples are barter networks like <em>Talent</em> or business exchange networks like <em>WIR</em>, <em>RES</em>.</p>
+<p>Mutual credit usually comes with high transaction costs. You might not always find the product you are looking for and it may be challenging to accept such currency for payment if you don't know where to spend it later.</p>
+<p>In an economic environment of deflation, when there is a shortage of money because banks are reluctant to issue credits, mutual credit has shown to be of great value [1]. But when there's an abundance of money, these networks are unattractive and they generally don't further Encointer's goal of reducing inequality.</p>
+<h3><a class="header" href="#local-fiat-currencies" id="local-fiat-currencies">Local Fiat Currencies</a></h3>
+<p>Currencies like Wörgl's AB Schein, Chiemgauer or Berkshares are denominated in national currency. Often they have circulating paper bills, sometimes featuring demurrage. What they all have in common: They are only circulating within a local community and are worthless elsewhere. Often, they are redeemable for national currency, sometimes subject to a small fee. Sometimes redemption is restricted to businesses.</p>
+<p>On the bottom line, such currencies can be understood as a loyalty programme promoting local spending, sometimes incentivized with discounts. They are successful in strenghtening the spirit of local community [1] and they can mitigate unemployment in an environment of deflation (Wörgl). However, due to globalization, local goods are often more expensive than imported ones. Therefore, these currencies are not attractive for poorer members of the community if they have to buy the local currency with national currency in the first place.</p>
+<p><a href="https://www.grassrootseconomics.org/community-currencies">Grassroots Economics'</a> Sarafu Credit in Kenya is a very innovative approach that shows significant social impact by empowering poor neighbourhoods by issuing money to local businesses directly. However, their concept introduces complexity, as money supply and distribution so far relies on careful engineering by experts from outside the community, for each community specifically. Moreover, Sarafu Credit is backed by donation money. While this may resemble a cash-transfer scheme, it actually isn't: Foreign capital is used as a fractional reserve for the local currency by applying <a href="https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a">bonding curves</a>.</p>
+<h3><a class="header" href="#time-banks" id="time-banks">Time Banks</a></h3>
+<p>A very egalitarian category of local currencies are time banks. They proclaim that one hour's worth of service by one human has equal value to one hour's work by any other. Mostly, they work like mutual credit currencies, with the difference that the denomination is hours instead of national currency.</p>
+<p>Examples are Blaengarw Time Centre, Dane County Time Bank</p>
+<p>While the concept of time banks has shown to increase social capital [1], in practise they feature high transaction cost and liquid matchmaking showed to be challenging. The main benefactors end up to be the same individuals that also perform well on a free market based on national money. If your service is in high demand, you will be able collect more hours than you'll be able to spend on services you desire.</p>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
+<h3><a class="header" href="#ab-schein-wörgl" id="ab-schein-wörgl">AB-Schein Wörgl</a></h3>
+<p>During the great depression, the austrian village of Wörgl attempted a monetary experiment to fight deflation: A complementary local currency.</p>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">Schilling (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by the muncipality, as partial salary for infrastructure  work</td></tr>
+<tr><td align="left">backing</td><td align="left">(full?) reserve in Schilling, provided by wealthy individuals</td></tr>
+<tr><td align="left">demurrage</td><td align="left">12% / year linear pro rata</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">2%</td></tr>
+<tr><td align="left">date</td><td align="left">1932 until prohibited in 1933</td></tr>
+</tbody></table>
+<p>Observed Impact:</p>
+<ul>
+<li>lower unemployment (-16% while elsewhere +19% in 1933)</li>
+<li>8-10x money velocity</li>
+<li>improved infrastructure: bridge, ski-jump, streets</li>
+</ul>
+<p><a href="http://userpage.fu-berlin.de/%7Eroehrigw/schmitt/text6.htm">source</a></p>
+<h3><a class="header" href="#chiemgauer" id="chiemgauer">Chiemgauer</a></h3>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">Euro (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by Chiemgau association, in exchange for Euro</td></tr>
+<tr><td align="left">backing</td><td align="left">full reserve in Euro</td></tr>
+<tr><td align="left">demurrage</td><td align="left">8% / year linear pro rata</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">5% (of which 3% go to local associations chosen by buyers of Chiemgauer)</td></tr>
+<tr><td align="left">date</td><td align="left">2003 until now</td></tr>
+</tbody></table>
+<h3><a class="header" href="#wir" id="wir">WIR</a></h3>
+<p>WIR is rather a reciprocal exchange network (barter ring) - but it is an official currency (CHW). It is only open to businesses, not private persons.</p>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">CHF (1:1 national currency)</td></tr>
+<tr><td align="left">issuance</td><td align="left">by WIR bank as credit (with low interest rate)</td></tr>
+<tr><td align="left">backing</td><td align="left">mixed-asset backed</td></tr>
+<tr><td align="left">demurrage</td><td align="left">none</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">reimbursement prohibited, you have to spend it</td></tr>
+<tr><td align="left">date</td><td align="left">1934 until now</td></tr>
+</tbody></table>
+<p><a href="https://archive.is/20130115184645/http://www.der-arbeitsmarkt.ch/arbeitsmarkt/de/themen/archiv/101176/WIR_sind_auch_Geld">source</a></p>
+<h3><a class="header" href="#blaengarw-time-centre" id="blaengarw-time-centre">Blaengarw Time Centre</a></h3>
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">denomination</td><td align="left">hours of work</td></tr>
+<tr><td align="left">issuance</td><td align="left">reward for community work</td></tr>
+<tr><td align="left">backing</td><td align="left">community events that can be attended with time credits</td></tr>
+<tr><td align="left">demurrage</td><td align="left">none</td></tr>
+<tr><td align="left">reimbursement fee</td><td align="left">no reimbursement</td></tr>
+<tr><td align="left">date</td><td align="left">2006 until now</td></tr>
+</tbody></table>
+<h2><a class="header" href="#references" id="references">References</a></h2>
+<p>[1] People Money: The Promise of Regional Currencies, Margrit Kennedy, Bernard Lietaer, John Rogers, ISBN-13: 978-1908009760, 2012</p>
+<h1><a class="header" href="#on-saving-loans-and-interest" id="on-saving-loans-and-interest">On Saving, Loans and Interest</a></h1>
+<h1><a class="header" href="#self-sovereign-identity-and-digital-personhood" id="self-sovereign-identity-and-digital-personhood">Self-Sovereign Identity and Digital Personhood</a></h1>
+<blockquote>
+<p>With self-sovereign identity (SSI) the individual identity holders can fully create and control their credentials, without being forced to request permission of an intermediary or centralised authority and gives control over how their personal data is shared and used. <em>Wikipedia</em></p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Self-sovereign_identity">SSI</a> is a key building block for any decentralized ecosystem. To establish trust online, we need to be able to present verifyable credentials to any counterparty of our choice. With SSI we can prove our name, residence, citizenship, diplomas online.</p>
+<blockquote>
+<p>While identity is about distinguishing one person from another through attributes or affiliations, personhood is about giving all real people inalienable digital participation rights independent of identity, including protection against erosion of their democratic rights through identity loss, theft, coercion, or fakery</p>
+</blockquote>
+<p><a href="https://arxiv.org/pdf/2011.02412.pdf">Ford2020</a></p>
+<h1><a class="header" href="#digital-personhood" id="digital-personhood">Digital Personhood</a></h1>
+<p>The <a href="./protocol.html">Encointer protocol</a> provides a decentralized <a href="https://en.wikipedia.org/wiki/Sybil_attack">sybil-defense</a> mechanism. Because each human can only be in one place at one time, Encointer provides each human with a <em>singular</em> proof of attendance for every ceremony attended. We call this a  unique-proof-of-personhood (uPoP). This uPoP is used for sybil-attack mitigation for <a href="./economics-ubi.html">Encointer's universal basic income</a>, but can also be useful for other use cases as described below.</p>
+<h2><a class="header" href="#privacy-considerations" id="privacy-considerations">Privacy Considerations</a></h2>
+<p>With Encointer, users may maintain different identities on different platforms. The Encointer uPoP can be used to ensure one human only maintains one ID on one specific platform with a high degree of anonymity.</p>
+<h2><a class="header" href="#sybil-defense-for-social-media" id="sybil-defense-for-social-media">Sybil-Defense for Social Media</a></h2>
+<p>Let's assume a decentralized social media platform like <a href="https://subsocial.network/">subsocial</a> enforces all its users to maintain only one account per human and prevents sybil attack with Encointer uPoP.</p>
+<p>Alice Smith registers on subsocial with an alter ego of Sophie Summers because she doesn't want her presence on subsocial to be easily linkable to her physical world identity. Upon registration, subsocial would send a challenge to Alice to provide a uPoP. This challenge includes </p>
+<ul>
+<li>a platform token identifying subsocial (must be unique for subsocial)</li>
+<li>a timestamp (or at least a ceremony index)</li>
+<li>a confidence threshold (like: <em>must prove attendance for N of the last M encointer ceremonies</em>)</li>
+<li>a list of trusted community identifers (can be restricted to a region to also provide plausibility of location of residence) Encointer will itself attempt to maintain a <a href="ssi.html#Community-Web-of-Trust">web-of-trust score for communities</a> which can be referenced instead.</li>
+</ul>
+<p>Alice now requests her uPoP for subsocial from the Encointer platform. Encointer maintains a registry of attested attendance for all recent ceremonies. Alice is represented in this registry by changing pseudonyms for every ceremony. These pseudonyms are public keys and she now has to provide evidence that she knows all private keys for all pseudonyms she claims. </p>
+<p>Given that Alice can prove attendance of the requested N of the last M ceremonies, Encointer provides a uPoP to be sent to subsocial in the form of a verifiable credential signed by one encointer-worker enclave's signing-key. Encointer then stores the subsocial platform token along with Alice's ceremony attendance attestations. Should Alice attempt to claim the same ceremony attendances again for another account on subsocial, Encointer would deny to provide a uPoP.</p>
+<p>uPoPs need to be renewed over time because an adversary could register an additional account every few months otherwise.</p>
+<p>Now imagine Sophie Summers becomes a victim of cyberbullying and Alice wants to drop that identity and create a new one under the name of Maria Gonzales. She will have to attend a few encointer ceremonies without claiming the attendance with subsocial. After a few months, she can register a new account on subsocial because she has collected enough unlinked evidence.</p>
+<h2><a class="header" href="#community-web-of-trust" id="community-web-of-trust">Community Web of Trust</a></h2>
+<p>The <a href="./protocol.html">Encointer protocol</a> builds communities based on trusted setups involving well-known people in every community. On a community level, this trusted setup is the root of trust. On a global level, these people may not be known nor trusted and communities will not trust each other blindly. Adversaries might maintain bot communities in the middle of the pacific. </p>
+<p>Encointer can leverage an economic incentive to build a web-of-trust (WoT) among communities: Encointer issues local currencies. Communities that trade with each other will exchange their local currencies frequently in both directions on a decentralized exchange (DEX). Based on a few trusted seed communities that act as a root of trust (one per country, continent, world), the whole world may become linkable in a single WoT given geographically dense adoption of Encointer.</p>
+<h2><a class="header" href="#polkadot-parachain-personhood-service" id="polkadot-parachain-personhood-service">Polkadot Parachain Personhood Service</a></h2>
+<p>Should Encointer become a common good parachain of Polkadot, it could provide proofs of digital personhood to other parachains through cross-chain communication. As uPoP will be signed by SGX enclaves, a client parachain needs a trustelss way to query the enclave registry to verify a uPoP.</p>
+<p><a href="https://wiki.polkadot.network/docs/en/learn-crosschain">XCMP</a> can be used to verify a certain enclave is registered as an encointer-worker and has passed remote attestation on the encointer platform.</p>
+<p>Please see our <a href="https://www.youtube.com/watch?v=Fw2dalJO1hM">sybil-defense demo video</a> to learn how sybil defense works within the Polkadot ecosystem of parachains.</p>
+<h1><a class="header" href="#encointer-protocol" id="encointer-protocol">Encointer Protocol</a></h1>
+<p>The <em>Encointer protocol</em> is what ensures that</p>
+<ul>
+<li>only humans get a UBI</li>
+<li>every human can only get it once</li>
+</ul>
+<p>We call the result of this protocol a <em>unique proof of personhood</em>.</p>
+<p>Encointer leverages the fact that every person can only be in one place at one time. Every 10 days, participants are requested to attend physical key-signing meetups with small groups of random people. Because all meetups happen as one global ceremony all on the same day at the same local time, no one can attend two meetups.</p>
+<p>The formal definition of the protocol can be found in our <a href="https://github.com/encointer/whitepaper/raw/master/encointer_whitepaper.pdf">whitepaper</a></p>
+<h1><a class="header" href="#the-encointer-ceremony-cycle" id="the-encointer-ceremony-cycle">The Encointer Ceremony Cycle</a></h1>
+<p>Encointer's proof-of-personhood protocol demands in-person participation in regular ceremony meetups.</p>
+<h2><a class="header" href="#ceremony-phases" id="ceremony-phases">Ceremony Phases</a></h2>
+<p>The perpetual ceremony cycle is divided into three phases:</p>
+<p><img src="./fig/ceremony-cycle-pie.svg" alt="Ceremony Phase Cycle" /></p>
+<h3><a class="header" href="#registering" id="registering">Registering</a></h3>
+<p>During this phase, community members can register for the upcoming ceremony. </p>
+<p>It is also possible to register new communities or new meetup locations ONLY during this phase</p>
+<p>If ceremony rewards have not already been claimed during <em>Attesting</em> phase, this can still be done now.</p>
+<p><em>Registering</em> is usually the longest phase in the cycle</p>
+<h3><a class="header" href="#assigning" id="assigning">Assigning</a></h3>
+<p>At the beginning of this phase, the chain will close registrations and pick a random seed for meetup assignments.</p>
+<p>Now it is time to check your <a href="./app.html">Encointer Wallet app</a> if you have been assigned to the upgoming ceremony (making you an <em>assigninee</em>) and where you'll have to physically be present with your mobile at what precise time.</p>
+<p><em>Assigning</em> lasts for 24h to give people enough lead time between the moment when they know if the were assigned and where and the moment when they have to physically attend.</p>
+<h3><a class="header" href="#attesting" id="attesting">Attesting</a></h3>
+<p>During this 48h phase, the ceremony meetups will be performed all around the world around local noon (high sun, actually).</p>
+<p>Assignees will physically meet at their assigned locations and times and mutually attest their personhood and attendance (<em>attendees</em>). They send their attestations to the chain. In the happy flow, ceremony rewards (community issued income) can be claimed immediately after the last attendee has sent their attestations.</p>
+<h2><a class="header" href="#timing" id="timing">Timing</a></h2>
+<p>On mainnet, the ceremonies currently happen in intervals of 10d. This interval is expected to be prolonged in the future, once the protocol has been tested enough.</p>
+<p>On our testnets, the timing may be different and may change over time to allow for different test setups or public demos.</p>
+<p><img src="./fig/ceremony-cycle-mainnet.svg" alt="Ceremony Phase Timing" /></p>
+<h1><a class="header" href="#encointer-personhood-reputation" id="encointer-personhood-reputation">Encointer Personhood Reputation</a></h1>
+<p>Successful attendance at <a href="./protocol-ceremony-cycle.html">Encointer ceremonies</a> gives you personhood <em>reputation</em>.</p>
+<p>The more frequently you attend ceremonies, the higher your reputation.</p>
+<h2><a class="header" href="#reputation-lifetime" id="reputation-lifetime">Reputation Lifetime</a></h2>
+<p>Reputation has limited lifetime, currently set to 5 ceremonies on mainnet. The reasoning is that personhood reputation should not benefit early adopters as they are not more human than late adopers. The upside is also that identity loss has limited impact. You just start all over with a new account in case you lost your phone and did not backup your account.</p>
+<h2><a class="header" href="#reputation-ratio" id="reputation-ratio">Reputation Ratio</a></h2>
+<p>We refer to reputation as number of attended ceremonies during the last N ceremonies, i.e. 3/5 will prove that you are not maintaining 2 or more accounts with that reputation, because you can only attend one meetup per ceremony.</p>
+<h2><a class="header" href="#user-journey" id="user-journey">User Journey</a></h2>
+<h3><a class="header" href="#newbie" id="newbie">Newbie</a></h3>
+<p>Usually, you will start with zero reputation as a newbie. You will need a tiny bit of your community's currency from someone else in your community or around 0.001 KSM (for Encointer Mainnet) to get started. You may register for a ceremony, but your assignment is not guaranteed because our <a href="./protocol-threat-model.html">threat model</a> assumes an honest majority. As anyone can register as a newbie, we need to limit the number of newbies per meetup. </p>
+<h4><a class="header" href="#endorsement" id="endorsement">Endorsement</a></h4>
+<p>If you know the bootstrappers of your community currency, you can ask them for an endorsement. They can endorse you as a trusted contact and you get a guaranteed assignment for th upcoming ceremony.</p>
+<h3><a class="header" href="#reputable" id="reputable">Reputable</a></h3>
+<p>Once you have attended at least one ceremony successfully, your status is <em>reputable</em> and as long as you attend at least one ceremony within the <a href="protocol-reputation.html#reputation-lifetime">reputation lifetime</a> you will always have a guaranteed assignemnt as long as there are enough other participants.</p>
+<h4><a class="header" href="#no-show-punishment" id="no-show-punishment">No-Show Punishment</a></h4>
+<p>Every time you register as reputable, you actually <em>spend</em> you reputation on your guaranteed slot. If you successfully attend the ceremony, you'll get a fresh repuatation. However, if you do not show up although you have registered, your reputation will not refresh and you fall back to newbie status.</p>
+<p>Spent reputation still counts for your <a href="protocol-reputation.html#reputation-ratio">reputation ratio</a>, but you can't use it again to register for a ceremony.</p>
+<h2><a class="header" href="#bootstrappers" id="bootstrappers">Bootstrappers</a></h2>
+<p>Bootstrappers are the first few pre-defined participants in the first ceremony of a community. They build the trusted setup as they are the ones who initate a new community. </p>
+<p>The <em>bootstrapper</em> status is immortal. Bootstrappers are always guaranteed an assignment if they register in time, irrespective of their recent reputation. The reasoning for this is that the entire community relies on the trusted setup and their special status allows a community to recover in case of an interruption or failure of an entire ceremony.</p>
+<p>Bootstrappers are also granted the right to <a href="protocol-reputation.html#endorsement">endorse</a> newbies to accelerate community growth based on interpersonal trust. Bootstrappers should only endorse people who they have met physically in their community area and should not rely on some online message asking them for endorsement.</p>
+<h1><a class="header" href="#community-identifiers" id="community-identifiers">Community Identifiers</a></h1>
+<p>Community Identifiers are a short string identifying a particular community. The format is based on a geohash of the community's location combined with a hash of the list of all bootstrapper accounts.</p>
+<p>Example: The Leu.Zuerich community has the cid <code>u0qj9QqA2Q</code></p>
+<h2><a class="header" href="#js-api" id="js-api">js api</a></h2>
+<p>Unfortunatrely, Polkadot js/apps does not support our cid type natively, so the above example appears as </p>
+<pre><code>  {
+    geohash: u0qj9
+    digest: 0x1012ea85
+  }
+</code></pre>
+<p>If you'd like to use javascript, please consider using our npm library <a href="https://github.com/encointer/encointer-js">encointer-js</a> which adds support for all our types</p>
+<h1><a class="header" href="#democracy" id="democracy">Democracy</a></h1>
+<blockquote>
+<p><em>this feature is work in progress and not yet released. See <a href="./decentralization-governance.html">Governance</a> to learn how it currently works</em></p>
+</blockquote>
+<p>The democracy module will bring decentralized governance to Encointer facilitating participants to take decisions. Such a <strong>universal human suffrage</strong> (one person one vote) governance shall render the current Encointer council obsolete.  Examples of such decisions are the addition of new meetup locations to a community, an adjustment of the Demurrage rate or changes in the ceremony schdeule. </p>
+<p>The decision making process should follow the subsidiarity principle, meaning that decisions should be taken on the lowest possible level. So for example, if a community wants to extend their region by adding some new meetup locations, only community members should be allowed to participate in the vote.</p>
+<h2><a class="header" href="#scope-of-democracy" id="scope-of-democracy">Scope of Democracy</a></h2>
+<p>This section describes the powers of Encointer's onchain democracy and at what level decisions are to be made.</p>
+<h3><a class="header" href="#protocol-changes" id="protocol-changes">Protocol Changes</a></h3>
+<p>Changes to the Encointer protocol are out of scope because they need to be decided by Kusama Relay-Chain Governance as Encointer is a common good parachain. Upgrades to the Encointer Protocol must pass a public <a href="https://guide.kusama.network/docs/learn-governance/#referenda">referendum on Kusama</a>, where KSM token holders decide.</p>
+<h3><a class="header" href="#global-actions" id="global-actions">Global Actions</a></h3>
+<p>These actions can only be decided upon by the quorum of all encointer communities globally</p>
+<ul>
+<li>Adjust ceremony schedule (can be adjusted anytime)
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L151"><code>next_phase</code></a>: force progress to next ceremony phase</li>
+<li><a href="push_by_one_day"><code>push_by_one_day</code></a>: postpone next phase change by one day push_by_one_day</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L173"><code>set_phase_duration</code></a>: adjust ceremony schedule phase durations</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L184"><code>set_next_phase_timestamp</code></a>: arbitrarily define the time for next phase change</li>
+</ul>
+</li>
+<li>Manage communities (can only be enacted during <em>Registering</em> phase)
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L76"><code>new_community</code></a>: Register new communities</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L299"><code>purge_community</code></a>: well...</li>
+</ul>
+</li>
+<li>Manage Ceremony Parameters (may only make sense to enact during <em>Registering</em> phase)
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L279"><code>set_min_solar_trip_time_s</code></a>: security parameter to calculate minimal location distance</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L289"><code>set_max_speed_mps</code></a>: security parameter defining the maximal speed over ground of an adversary</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L386"><code>set_inactivity_timeout</code></a>: define how many ceremonies a community can be idle before getting purged</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_endorsement_tickets_per_bootstrapper</code></a>: define how many endorsement tickets bootstrappers should get to invite people they trust</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_reputation_lifetime</code></a>: define how long proof-of-personhood reputation is valid for and stored</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_meetup_time_offset</code></a>: finetune meetup time difference to high sun</li>
+</ul>
+</li>
+<li>Decide on Treasury Proposals</li>
+</ul>
+<h3><a class="header" href="#community-actions" id="community-actions">Community Actions</a></h3>
+<p>These actions can be decided per community for themselves</p>
+<p>Only to be changed during <em>Registering</em> phase</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L143"><code>add_location</code></a>: add meetup location for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L189"><code>remove_location</code></a>: remove meetup location for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L258"><code>update_nominal_income</code></a>: the amount of basic income per ceremony per person per community</li>
+</ul>
+<p>Not strictly related to a particular ceremony phase. could be adjusted anytime.</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L214"><code>update_community_metadata</code></a>: change name, currency, artwork IPFS cid for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L238"><code>update_demurrage</code></a>: change how fast balances are demurraged per community</li>
+</ul>
+<h2><a class="header" href="#proposals" id="proposals">Proposals</a></h2>
+<p>There is a set of predefined proposal <em>actions</em> that can be voted on (ie. set basic income to XY)</p>
+<p>Everyone can start a proposal on an <em>action</em> (ie. set basic income to 48 LEU)</p>
+<p>Every member of the community can use their reputation to vote on a proposal (the more reputation, the more voting power. Capped at <em>reputation_lifetime</em>)</p>
+<p>A proposal gets approved if it is in a passing state (enough aye votes) for a long enough time period (confirmation period)</p>
+<p>There can be multiple proposals up for vote simultaneously, even on the same action</p>
+<p>When a proposal gets approved, all other proposals on the same <em>action</em> get cancelled, to avoid conflicts</p>
+<p>When a proposal A gets approved, its enactment will be scheduled to the beginning of the next ceremony cycle. Should another proposal B get approved after proposal A’s approval but before it’s enactment, proposal B will be scheduled for enactment and proposal A will be cancelled.</p>
+<p><img src="./fig/democracy-proposal-state-machine.drawio.svg" alt="Proposal state machine" /></p>
+<h3><a class="header" href="#proposal-lifetime" id="proposal-lifetime">Proposal Lifetime</a></h3>
+<p>The following examples will describe examples of how proposals change their state over time based on a changing number of votes and on other proposals.</p>
+<p>Let</p>
+<ul>
+<li>Confirmation Period = 3 units,</li>
+<li>Proposal Lifetime = 12 units,</li>
+<li>X/Y denote X aye votes and Y total votes,</li>
+<li>O = Ongoing,</li>
+<li>C = Confirming,</li>
+<li>A = Approved,</li>
+<li>X = Cancelled.</li>
+</ul>
+<p>For the sake of simplicity, we assume that just a simple majority is needed for a proposal to pass and there is no minimum vote required.</p>
+<p>In the case of multiple proposals, all proposals shall be of the same action.</p>
+<p><img src="./fig/democracy-voting.drawio.svg" alt="Democracy Voting" /></p>
+<h2><a class="header" href="#voting" id="voting">Voting</a></h2>
+<h3><a class="header" href="#eligible-reputations" id="eligible-reputations">Eligible Reputations</a></h3>
+<p>We currently allow only reputations older that the ceremony cycle of the proposal start - 2 to participate in the vote. This is because the count of those reputations is not subject to change anymore. We need a reliable count of all eligible reputations in order to determine the maximum amount of possible votes, which is required 1. for AQB and 2. to determine the minimum turnout.</p>
+<p>If we want to relax this in the future, we would need to come up with a way to handle the dynamic change of the electorate while a proposal is running. This is not trivial.</p>
+<h3><a class="header" href="#adaptive-quorum-biasing-aqb-and-minimum-approval" id="adaptive-quorum-biasing-aqb-and-minimum-approval">Adaptive Quorum Biasing (AQB) and Minimum Approval</a></h3>
+<p>In order to determine if a vote is passing, we use Positive Turnout Bias. In addition we enforce a minimum turnout of 5%.</p>
+<h1><a class="header" href="#threat-model" id="threat-model">Threat Model</a></h1>
+<h2><a class="header" href="#actor-profiles" id="actor-profiles">Actor Profiles</a></h2>
+<p>We categorize users into the following psychological profiles for later scenario analysis:</p>
+<h3><a class="header" href="#honest-img-srcfigemoji_innocent_1f607svg-width64" id="honest-img-srcfigemoji_innocent_1f607svg-width64">Honest <img src=./fig/emoji_innocent_1F607.svg width=64></a></h3>
+<p>Will comply with the rules</p>
+<h3><a class="header" href="#greedy-img-srcfigemoji_devil_1f47fsvg-width64" id="greedy-img-srcfigemoji_devil_1f47fsvg-width64">Greedy <img src=./fig/emoji_devil_1F47F.svg width=64></a></h3>
+<p>Will try to cheat the system for his/her own benefit. Will collude with others</p>
+<p>Strategies:</p>
+<ul>
+<li>Get reward without showing up</li>
+<li>Sign sybil id's to collect more rewards</li>
+</ul>
+<h3><a class="header" href="#saboteur-img-srcfigemoji_angry_1f621svg-width64" id="saboteur-img-srcfigemoji_angry_1f621svg-width64">Saboteur <img src=./fig/emoji_angry_1F621.svg width=64></a></h3>
+<p>Will try to hurt the system, even if this comes at a cost. Will collude with others</p>
+<p>Strategies:</p>
+<ul>
+<li>turn meetups invalid</li>
+<li>demoralize other participants by preventing them to get reward</li>
+</ul>
+<h2><a class="header" href="#more-roles" id="more-roles">More Roles</a></h2>
+<h3><a class="header" href="#sybil-img-srcfigemoji_alien_1f47dsvg-width64" id="sybil-img-srcfigemoji_alien_1f47dsvg-width64">Sybil <img src=./fig/emoji_alien_1F47D.svg width=64></a></h3>
+<p>An identity that has no bijectively exclusive relationship with a participant. It can however have a bijectively exclusive relationship with a person who doesn't attend any meetup.</p>
+<h3><a class="header" href="#manipulable-img-srcfigemoji_hearts_1f970svg-width64" id="manipulable-img-srcfigemoji_hearts_1f970svg-width64">Manipulable <img src=./fig/emoji_hearts_1F970.svg width=64></a></h3>
+<p>An honest person that can be convinced to break the rules by social pressure. Will not strive for economic benefit.</p>
+<h2><a class="header" href="#collusion-organizations" id="collusion-organizations">Collusion Organizations</a></h2>
+<h3><a class="header" href="#evilcorp" id="evilcorp">evil.corp</a></h3>
+<p>An organization of the greedy or saboteur participants. </p>
+<p>Strategies: </p>
+<ul>
+<li>undermining randomization by sharing information and key pairs to allow collusion attacks at meetups</li>
+</ul>
+<h1><a class="header" href="#assumptions" id="assumptions">Assumptions</a></h1>
+<p>We assume </p>
+<ol>
+<li>The majority of ceremony participants with reputation sending their signed claims to the blockchain location is honest.</li>
+</ol>
+<p><em>Reputation</em> here means having attended at least one of the last two ceremonies and having been rewarded.</p>
+<h1><a class="header" href="#rule-design" id="rule-design">Rule Design</a></h1>
+<p>When designing rules there's a tradeoff beween preventing either the greedy or the saboteur's success. We can introduce very restrictive rules that will successfully prevent sybil attacks by the greedy, but these will make it very easy for the saboteur to demoralize participants by turning meetups invalid deliberately.</p>
+<h2><a class="header" href="#rules" id="rules">Rules</a></h2>
+<p>TODO: This is work in progress....</p>
+<h3><a class="header" href="#meetup-assignment" id="meetup-assignment">Meetup Assignment</a></h3>
+<ol>
+<li>A meetup has at least <font color="green">3</font> assigned participants</li>
+<li>A meetup has at most <font color="green">12</font> assigned participants</li>
+<li>Only <font color="green">1/4</font> of assigned participants may have zero reputation (be newcomers)
+<ul>
+<li><em>this rule directly impacts the maximum adoption rate. A population of 1M will take at least</em> log(1M/12)/log(4/3) &lt;= 40 ceremonies </li>
+</ul>
+</li>
+</ol>
+<h3><a class="header" href="#meetup-validation" id="meetup-validation">Meetup validation</a></h3>
+<ol>
+<li>(NEEDED?) The signature <a href="https://en.wikipedia.org/wiki/Reciprocity_(network_science)">reciprocity</a> is at least <font color="green">X</font></li>
+<li>(NEEDED?) The reciprocal edge connectedness is at least M-2, where M is the number of participants with at least one signature by another party.</li>
+<li>(OK) At least <font color="green">two</font> participants signed each other mutually</li>
+<li>(OK) Disqualify a participant if her vote is not equal to the number of participants signed by her.</li>
+</ol>
+<h3><a class="header" href="#ubireward-issuance" id="ubireward-issuance">UBI/Reward Issuance</a></h3>
+<p>In order to receive a UBI, a participant </p>
+<ol>
+<li>(OK) must be registered and assigned to the meetup</li>
+<li>(OK) the meetup must be valid</li>
+<li>(TODO: ARGUE THRESHOLD) must have her claim signed by at least <font color="green">1/3</font> of registered participants</li>
+<li>(OK) must have signed the participants that are necessary to fulfill rule above in return</li>
+</ol>
+<h1><a class="header" href="#remote-attacks" id="remote-attacks">Remote Attacks</a></h1>
+<h2><a class="header" href="#flooding-attack" id="flooding-attack">Flooding Attack</a></h2>
+<p>An adversary could register large numbers of fake participants who will never show up. This could prevent legit persons to participate.</p>
+<p>Mitigation: </p>
+<ul>
+<li>Limit the number of assigned participants with no reputation</li>
+</ul>
+<h1><a class="header" href="#non-protocol-threats" id="non-protocol-threats">Non-Protocol Threats</a></h1>
+<h2><a class="header" href="#aggression-detention" id="aggression-detention">Aggression, Detention</a></h2>
+<p>If meetup locations are publicly known, participants could face aggression from saboteurs or they could be detained if participation is suddenly judged illegal.</p>
+<p>Mitigation: </p>
+<ul>
+<li>The set of possible meetup locations has to be significantly larger than the need in order to host all participants.</li>
+</ul>
+<h2><a class="header" href="#abduction" id="abduction">Abduction</a></h2>
+<p>If celebrity meetup participants can be linked to their names and meetup locations in advance, they might get kidnapped</p>
+<p>Mitigation: </p>
+<ul>
+<li>Make sure meetup assignments are kept confidential at least until the meetup has passed.</li>
+</ul>
+<h1><a class="header" href="#behavioural-meetup-scenario-analysis" id="behavioural-meetup-scenario-analysis">Behavioural Meetup Scenario Analysis</a></h1>
+<p>The scenario analysis is structured by the number of participants who were assigned to a meetup</p>
+<h2><a class="header" href="#3-registered-participants" id="3-registered-participants">3 Registered Participants</a></h2>
+<h3><a class="header" href="#happy-flow" id="happy-flow">Happy Flow</a></h3>
+<p>All participants only sign for persons present at meetup location. </p>
+<p><img src="./fig/meetup_3r_3i.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>Noshow of one is treated with mercy for attendees</p>
+<p><img src="./fig/meetup_3r_2i1s_1noshow.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 1
+</code></pre>
+<h3><a class="header" href="#attacks" id="attacks">Attacks</a></h3>
+<h4><a class="header" href="#social-engineering" id="social-engineering">Social Engineering</a></h4>
+<p>Adversary B talks A into signing his sybil ID</p>
+<p><img src="./fig/meetup_3r_1m1d1a.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>As there is no honest participant in this meetup, this attack is out of scope of our threat model.</p>
+<p>Mitigation</p>
+<ul>
+<li>randomized meetups should reduce the chance that someone could be assigned with his sybil to the same meetup. In weakly populated areas, this can happen easily though</li>
+</ul>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h4><a class="header" href="#exclusion" id="exclusion">Exclusion</a></h4>
+<p>Adversary B refuses to sign A and signs C instead</p>
+<p><img src="./fig/meetup_3r_1i1d1a.svg" alt="" /></p>
+<p>A variant of this would be that B isn't even present at the meetup</p>
+<pre><code>reciprocity = 0.5 (1.0)
+reciprocal edge connectedness = 1
+</code></pre>
+<p>Mitigation <strong>none</strong></p>
+<ul>
+<li>randomized meetups should reduce the chance that someone could be assigned with his sybil to the same meetup. In weakly populated areas, this can happen easily though. evil.corp could also increase chances.</li>
+<li>Only allow meetups with more participants (&gt;=4?) in order to reduce the impact of a single participant on outcome.</li>
+</ul>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h2><a class="header" href="#4-registered-participants" id="4-registered-participants">4 Registered Participants</a></h2>
+<h3><a class="header" href="#oversigning" id="oversigning">Oversigning</a></h3>
+<p><img src="./fig/meetup_4r_1i2d1a.svg" alt="" /></p>
+<p>Variant:</p>
+<ul>
+<li>B and C are not present at meetup, removing the reciprocal edges to A</li>
+</ul>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>Mitigation: </p>
+<ol>
+<li>(NOK) Introduce <strong>Reputation</strong> (previous attendance to successful meetups)</li>
+<li>(NOK) Introduce Rule <em>&quot;lowest vote with reputation wins&quot;</em>
+* This rule, however, will cause B, C, and D to vote &quot;3&quot; showups and to refuse to sign A. Reputation doesn't help because B and C could have reputation as well.</li>
+<li>(NEEDED?) quarantine non-consistent meetups</li>
+</ol>
+<p>At this meetup, 3/4 of registered participants are malicious.</p>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h3><a class="header" href="#oversigning-light" id="oversigning-light">Oversigning light</a></h3>
+<p><img src="./fig/meetup_4r_2i1d_1a.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 1
+</code></pre>
+<p>Mitigation</p>
+<ul>
+<li>only accept subgraph with recipr. edge connectedness of M-2 for M=4 here. This will cut off D.</li>
+</ul>
+<h3><a class="header" href="#location-spoofing" id="location-spoofing">Location Spoofing</a></h3>
+<p><img src="./fig/meetup_4r_2i1d1a.svg" alt="" /></p>
+<p>C and D could pretend to be at the meetup location. The ceremony validation has no way to know if A-B is legit or C-D.</p>
+<p>Variants:</p>
+<ul>
+<li>D could be a real person colluding with C</li>
+</ul>
+<p>Probability:</p>
+<ul>
+<li>low because of randomization if number of meetups assigned is high
+<ul>
+<li>evil.corp could redistribute sybil id's after meeting assignments, undermining randomization</li>
+</ul>
+</li>
+</ul>
+<p>Mitigation: </p>
+<ol>
+<li>(NOK) track participant locations and require plausible movement trajectories before meetup. <strong>not sound</strong> because it is easy for C+D to spoof realistic trajectories</li>
+<li>(NEEDED?) Quarantine: The validator can detect that the meetup is split and therefore not consistent. Issuance could be conditional to future ceremony attendance</li>
+<li>(OK) The pair with higher reputation wins, the other doesn't get a reward issued.</li>
+<li>(NOK) invalidate non-consistent meetups, preventing 2 illegit rewards while demoralizing 2 honest participants.</li>
+</ol>
+<p>At this meetup, 1/2 of registered participants are malicious.</p>
+<h2><a class="header" href="#5-registered-participants" id="5-registered-participants">5 Registered Participants</a></h2>
+<p><img src="./fig/meetup_5r_2i1d_2a.svg" alt="" /></p>
+<p>Mitigation:</p>
+<ul>
+<li>Disqualify participant if vote != number of peers she signed</li>
+</ul>
+<p><img src="./fig/meetup_5r_2i_1d2a.svg" alt="" /></p>
+<p>Mitigation:</p>
+<ul>
+<li><em>none</em>, if C,E,D all have reputation. the majority can always win. </li>
+</ul>
+<p><em>This violates threat model assumption 1</em></p>
+<h1><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h1>
+<p>As long as the threat model assumptions are held, we can find a set of rules that prevents:</p>
+<ul>
+<li>issuing more rewards than there are honest participants (while there is no guarantee that every honest participant will get a reward in face of malicious behaviour)</li>
+</ul>
+<p>The probability that you as a participant experience a meetup with evil majority follows the poisson cumulative distribution function:</p>
+<p>Given the overall proportion of malicious actors , the probability that you (being an honest actor) will suffer from malicious behaviour at one specific meetup depending on the number of participants in your meetup <em>n</em> is</p>
+<p><a href="./fig/probability_of_malicious_majority.m">code</a>
+<img src="./fig/probability_of_malicious_majority.svg" alt="" /></p>
+<h1><a class="header" href="#decentralization" id="decentralization">Decentralization</a></h1>
+<p>Decentralization can mean very different things and is never black and white but rather a goal that can never be fully achieved. Encointer aims at</p>
+<ul>
+<li><strong>architectural decentralization:</strong> avoid a single point of failure through redundancy (different machines in different geographic locations)</li>
+<li><strong>political decentralization:</strong> distribute control among many individuals and organizations</li>
+<li><strong>logical decentralization:</strong> ensure that the system can continue to exist if it is divided into arbitrary subgroups</li>
+</ul>
+<p>The first two are common for blockchains. Logical decentralization, however, isn't a feature of global blockchains. There may only be one truth globally. Encointer, on the other hand, can be split into its shards of local communities and continue to exist - with restrictions on finality and interoperability. This way, Encointer could even continue to exist in countries that eclipse their citizens from the internet or selective parts of it. At least temporarily.</p>
+<p>Over all, <em>resilience</em> is what we aim for.</p>
+<h2><a class="header" href="#blockchain" id="blockchain">Blockchain</a></h2>
+<p>Why does Encointer need a blockchain? All the economic aspects could be implemented with a central server as well. </p>
+<p>We develop the Encointer software with altruistic intentions. Still, Encointer may likely be judged as unlawful in certain juristictions and repression may follow. If a trusted entity would operate Encointer as a service, that system would be very vulnerable to states or other economically powerful entities.</p>
+<p>P2P systems, including blockchains, have proven to be very resilient versus state intervention. </p>
+<h2><a class="header" href="#consensus-and-security" id="consensus-and-security">Consensus and Security</a></h2>
+<p>On Blockchains, code is law. This law needs to be secured against malicious attacks. While the security of the bitcoin blockchain is measured in mining hashpower, the security of PoS chains like Polkadot is measured in staked capital. Both approaches boild down to the simple rule: <em>the &quot;biggest&quot; blockchain is the most secure</em>.</p>
+<p>As Encointer is no business case or speculative asset by design, it needs to rely on other things than capital or hashpower for security of consensus. </p>
+<p>Thanks to its proof-of-personhood, Encointer could apply democratic consensus like described in <a href="http://bford.info/pub/dec/pop.pdf">PoPcoin</a>.
+However, a web of trust would have to be established first.</p>
+<p><a href="https://polkadot.network/">Polkadot</a> is a heterogeneous multi-chain system with shared security. While this approach reduces the amount of capital Encointer would have to bind for equal security, it still is a profoundly capitalistic system and competition around parachain slots may make it impossible for Encointer to become a <a href="https://wiki.polkadot.network/docs/en/learn-parachains">Polkadot parachain</a>. </p>
+<p>While the final solution is yet to be discovered, Encointer will start off as a proof-of-authority (PoA) chain which is initially operated by trusted entities. The worker registry, however, will be permissionless. Anyone with a suitable TEE will be able to operate workers for communities of their choice.</p>
+<p>Once possible, Encointer will attempt to become a parachain of Polakdot or Kusama by means of crowdfunding.</p>
+<p>Should this fail, it can still get finality for its PoA consensus by running as a <a href="https://wiki.polkadot.network/docs/en/learn-parathreads">parathread</a> instead.</p>
+<h2><a class="header" href="#governance" id="governance">Governance</a></h2>
+<p>Encointer is no static system. It shall evolve over time and different communities shall be able to adjust their local rules independently. Such a foederalistic governance is possible thanks to Encointers' <a href="./ssi.html">self-sovereign identity (SSI) features</a>.  Encointer's proof-of-personhood allows to have democratic voting. Its proof-of-location ensures that people can only vote on matters concerning their local community. This local governance shall rule over the parameters of individual community currencies, such as defining meetup locations, changing the <a href="./economics-demurrage.html">demurrage rate</a>, changing the <a href="./economics-ubi.html">UBI</a> amount or the name of their currency.</p>
+<p>Global governance shall leverage the <a href="./ssi.html#community-web-of-trust">web-of-trust among communities</a>. Democratic votes are thus weighted with the trust score of each community. Global governance shall decide on updates to the blockchain logic and global parameter such as the ceremony period, the set of trusted TEE manufacturers or the distribution of fees.</p>
+<h2><a class="header" href="#privacy" id="privacy">Privacy</a></h2>
+<p>Encointer protects its users' privacy by design:</p>
+<ul>
+<li>transfers of local community currencies are private by default. No one learns who sends how much to whom.</li>
+<li>account balances of local community currencies are private (while aggregated values such as a community's total issuance and turnover are public)</li>
+<li>ceremony meetup assignments are processed confidentially because that strenghtens the Encointer protocol by hindering collusion. </li>
+</ul>
+<h3><a class="header" href="#philosophy" id="philosophy">Philosophy</a></h3>
+<p>Privacy can also be a threat to communities. There is a good reason why most nation states enforce anti money laundering (AML) laws. Encointer aims to follow a simple rule: <strong>The smaller the amounts, the higher the privacy should be. And vice versa - the higher the amounts, the higher the transparency should be</strong>. This - unfortunately - is pretty much the opposite of what we experience in today's reality as big capital and gains can easily be offshored and obscured while everyday purchases are traced down to the penny.</p>
+<p>As encointer is made up of many small communities - none of which will have a significant market capitalization on a global scale - it will never be easy to move great amounts of capital through these local currencies unnoticed. That's why Encointer simply is not an attractive channel for laundering money.</p>
+<h1><a class="header" href="#governance-1" id="governance-1">Governance</a></h1>
+<h2><a class="header" href="#subsidiarity" id="subsidiarity">Subsidiarity</a></h2>
+<p>The Encointer Network is governed on multiple levels. 
+The design paradigm is subsidiarity: <em>issues should be dealt with at the most immediate (or local) level that is consistent with their resolution.</em></p>
+<h3><a class="header" href="#global-protocol-scope" id="global-protocol-scope">Global Protocol Scope</a></h3>
+<p>Encointer is a common-good parachain of the Kusama Network. The Kusama Network provides its security to Encointer, but requires that Encointer protocol updates are decided by KSM holders who granted the common-good slot in the first place and have to evaluate if the update is sound and still complies with common-good criteria. </p>
+<h3><a class="header" href="#global-operative-scope" id="global-operative-scope">Global Operative Scope</a></h3>
+<p>The Encointer protocol defines certain global parameters which are common to all communities. Changing such parameters requires a global decision</p>
+<h3><a class="header" href="#local-community-scope" id="local-community-scope">Local Community Scope</a></h3>
+<p>Each community can decide on parameters that only concern itself. Such parameters are demurrage, nominal income per ceremony and community metadata like Logo, Name</p>
+<h2><a class="header" href="#council" id="council">Council</a></h2>
+<p>Encointer aims at <a href="./protocol-democracy.html">democratic governance based on one-person-one-vote</a>. However, democracy requires a representative number of users and communities to be meaningful and legitimate.
+Therefore, governance is delegated to a council until the community deems to be ready for democracy. </p>
+<p>The council currently consists of 7 members of the Encointer Association. Each local community may elect a representative which shall join the council.</p>
+<h3><a class="header" href="#powers-of-council" id="powers-of-council">Powers of Council</a></h3>
+<p>The council currently governs the Global Operative Scope and the Local Community Scope. Through <a href="https://encointer.subscan.io/event?module=collective&amp;event=all">propsals</a>, it can execute the following actions:</p>
+<ul>
+<li>
+<p>Adjust ceremony schedule</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L151"><code>next_phase</code></a>: force progress to next ceremony phase</li>
+<li><a href="push_by_one_day"><code>push_by_one_day</code></a>: postpone next phase change by one day push_by_one_day</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L173"><code>set_phase_duration</code></a>: adjust ceremony schedule phase durations</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/scheduler/src/lib.rs#L184"><code>set_next_phase_timestamp</code></a>: arbitrarily define the time for next phase change</li>
+</ul>
+</li>
+<li>
+<p>Manage communities</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L76"><code>new_community</code></a>: Register new communities</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L143"><code>add_location</code></a>: add meetup location for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L189"><code>remove_location</code></a>: remove meetup location for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L214"><code>update_community_metadata</code></a>: change name, currency, artwork IPFS cid for community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L238"><code>update_demurrage</code></a>: change how fast balances are demurraged per community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L258"><code>update_nominal_income</code></a>: the amount of basic income per ceremony per person per community</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L279"><code>set_min_solar_trip_time_s</code></a>: security parameter to calculate minimal location distance</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L289"><code>set_max_speed_mps</code></a>: security parameter defining the maximal speed over ground of an adversary</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/communities/src/lib.rs#L299"><code>purge_community</code></a>: Remove a community by from the registry entirely, wiping all balances, reputation and locations</li>
+</ul>
+</li>
+<li>
+<p>Manage Ceremony Parameters and Memory</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L386"><code>set_inactivity_timeout</code></a>: define how many ceremonies a community can be idle before getting purged</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_endorsement_tickets_per_bootstrapper</code></a>: define how many endorsement tickets bootstrappers should get to invite people they trust</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_reputation_lifetime</code></a>: define how long proof-of-personhood reputation is valid for and stored</li>
+<li><a href="https://github.com/encointer/pallets/blob/91cbd7c9c0d47c4a80c096d3b2b501625a6bb724/ceremonies/src/lib.rs#L396"><code>set_meetup_time_offset</code></a>: finetune meetup time difference to high sun</li>
+<li><a href="https://github.com/encointer/pallets/blob/f37679a922a675f7a98a9006704d32fe6c3874ec/ceremonies/src/lib.rs#L451"><code>purge_community_ceremony</code></a>: garbage collect outdated reputation if necessary due to parameter changes</li>
+<li><a href="https://github.com/encointer/pallets/blob/1d52b0775471270bbcb42686f02555d5367aa68f/ceremonies/src/lib.rs#L452"><code>set_time_tolerance</code></a> set how precisely the meetup time needs to be attested to be considered valid</li>
+<li><a href="https://github.com/encointer/pallets/blob/1d52b0775471270bbcb42686f02555d5367aa68f/ceremonies/src/lib.rs#L464"><code>set_location_tolerance</code></a> set how precisely the meetup location needs to be attested to be considered valid</li>
+</ul>
+</li>
+<li>
+<p>Manage Currency/Fee Parameters</p>
+<ul>
+<li><a href="https://github.com/encointer/pallets/blob/1d52b0775471270bbcb42686f02555d5367aa68f/balances/src/lib.rs#L104"><code>setFeeConversionFactor</code></a> tune community currency extrinsic fees relative to KSM fees and community income</li>
+</ul>
+</li>
+<li>
+<p>Treasury</p>
+<ul>
+<li><a href="https://github.com/encointer/encointer-parachain/pull/100">accept / reject treasury spend proposals</a> (the treasury receives KSM fees for extrinsics plus potential donations</li>
+</ul>
+</li>
+</ul>
+<p>In the beginning, onboarding of new communites will be permissioned, subject to the council's approval. 
+The team sees no other way to avoid bot communities squatting the earth's surface. 
+Over time, a web-of-trust will build and new communities can be onboarded by endorsement of other communites.</p>
+<h1><a class="header" href="#testnets" id="testnets">Testnets</a></h1>
+<p>Encointer maintains two testnets: Gesell and Cantillon.</p>
+<p>The networks differ in their goals and designs:</p>
+<h2><a class="header" href="#gesell" id="gesell">Gesell</a></h2>
+<p>Aimed at automated testing of the protocol and our <a href="./app.html">mobile phone app</a>.</p>
+<ul>
+<li>Time-warping allows to script bot populations and hold ceremonies every 30min.</li>
+<li>Complete transparency of all registries and balances. Everything happens on-chain.</li>
+<li>experimenting with real ceremony meetups, physically meeting people.</li>
+</ul>
+<h2><a class="header" href="#cantillon" id="cantillon">Cantillon</a></h2>
+<p>The main purpose of Cantillon is privacy enhancement through Trusted Execution environments (with enclaves still in development mode, so privacy is not guaranteed before we move to production mode)</p>
+<p>Watch our <a href="https://youtu.be/X1Zb68Z1fac">demo video on bootstrapping a bot community</a></p>
+<h2><a class="header" href="#outlook-on-mainnet" id="outlook-on-mainnet">Outlook on Mainnet</a></h2>
+<p>The mainnet is planned to become a parachain of <a href="https://kusama.network/">Kusama</a>, the canary network of <a href="https://polkadot.network/">Polkadot</a>. The chain security will depend on Kusama relay chain.</p>
+<h2><a class="header" href="#time-warping-for-testnets" id="time-warping-for-testnets">Time Warping for Testnets</a></h2>
+<p>In order to understand the different timing on our networks, we offer the following figure:</p>
+<p><img src="./fig/phase-timing.svg" alt="Phase Timing" /></p>
+<ul>
+<li>Temporarily, we will apply 30min ceremony cycle to both Gesell and Cantillon*</li>
+</ul>
+<h1><a class="header" href="#testnet-gesell" id="testnet-gesell">Testnet Gesell</a></h1>
+<p>Gesell is our first testnet. It allows you to bootstrap new local currencies and perform regular proof-of-personhood ceremonies that give participants a universal basic income. This network is meant for testing with bot populations in order to audit and stress-test the protocol. Gesell does not give you the privacy that later networks will provide. We do not expect real physical meetups to happen on this network except occasional demo meetups. </p>
+<h2><a class="header" href="#design" id="design">Design</a></h2>
+<p>Gesell is based on <a href="https://substrate.dev/">substrate</a> and its nodes consist of four <em>pallets</em></p>
+<p><img src="./fig/Testnet-Gesell-Component-Interactions.svg" alt="Gesell" /></p>
+<h3><a class="header" href="#scheduler" id="scheduler">Scheduler</a></h3>
+<p>Keeps track of time and maintains the ceremony state-machine phase changes.</p>
+<h3><a class="header" href="#currencies" id="currencies">Currencies</a></h3>
+<p>Registry for all local currencies with their properties and meetup locations</p>
+<h3><a class="header" href="#balances" id="balances">Balances</a></h3>
+<p>The individual's account balances in all currencies, featuring <a href="./economics-demurrage.html">demurrage</a>.</p>
+<h3><a class="header" href="#ceremonies" id="ceremonies">Ceremonies</a></h3>
+<p>Where participants register for ceremonies. Assignment of meetups and issuance of UBI upon proof-of-personhood.</p>
+<h1><a class="header" href="#testnet-cantillon" id="testnet-cantillon">Testnet Cantillon</a></h1>
+<p>** DISCONTINUED **</p>
+<p>Cantillon was the testnet to showcase the privacy features using trusted execution environments with <a href="https://integritee.network">Integritee technology</a></p>
+<p>It is still on our roadmap to include these features, but currently, the focus lies on running a <a href="./parachain-kusama.html">common good parachain on Kusama</a></p>
+<h2><a class="header" href="#design-1" id="design-1">Design</a></h2>
+<p>Cantillon uses the same pallets as Gesell, but the privacy-sensitive ones will be executed off-chain, inside a trusted execution environment (TEE). <a href="https://github.com/scs/substraTEE">SubstraTEE</a> will be the framework that isolates sensitive information inside Intel SGX enclaves (Alternative TEE technologies are being evaluated)</p>
+<p><img src="./fig/Testnet-Cantillon-Component-Interactions.svg" alt="Cantillon" /></p>
+<h1><a class="header" href="#encointer-kusama-parachain" id="encointer-kusama-parachain">Encointer Kusama Parachain</a></h1>
+<p>Encointer's productive mainnet is planned run as a common good parachain on Kusama.</p>
+<p>More info coming...</p>
+<h1><a class="header" href="#bazaar" id="bazaar">Bazaar</a></h1>
+<p>What is a local currency without the possibility to spend it on desired goods and services? How can you find businesses that accept the local Encointer currency? Encointer features a builtin classifieds system for advertizing businesses and offerings we call <em>bazaar</em>.</p>
+<p>Anyone can register businesses and offerings to be advertized within their local community. All metadata and images for classifieds are stored on <a href="https://ipfs.io/">ipfs</a>. The ownership of classifieds is registered on the Encointer blockchain.</p>
+<h2><a class="header" href="#vouchers" id="vouchers">Vouchers</a></h2>
+<p>Every business may issue their own transferrable vouchers and can therefore issue their own loyalty money or <a href="./economics-interest.html">acquire loans from the community</a>. As businesses are owned by real people whose digital personhood has been attested at Encointer ceremonies, these vouchers come with a sybil-defense and the credit rating of businesses is immutably recorded.</p>
+<h1><a class="header" href="#encointer-wallet-app" id="encointer-wallet-app">Encointer Wallet App</a></h1>
+<img src=https://raw.githubusercontent.com/encointer/encointer-wallet-flutter/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png height=500/>
+<p>The Encointer app is all that users need to participate in a local community. It serves as a wallet and lets you participate in Encointer ceremonies.</p>
+<h2><a class="header" href="#install" id="install">Install</a></h2>
+<h3><a class="header" href="#android" id="android">Android</a></h3>
+<p><a href="https://f-droid.org/packages/org.encointer.wallet/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="55"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=org.encointer.wallet"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="55"></a></p>
+<h3><a class="header" href="#ios" id="ios">iOS</a></h3>
+<p><a href="https://apps.apple.com/us/app/encointer-wallet/id1535471655?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1619049600&h=f616bcfbdbf4c04f0ca6524a2a683d4b" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a></p>
+<h3><a class="header" href="#feature-phones-kaios" id="feature-phones-kaios">Feature Phones: KaiOS</a></h3>
+<p>Feature phone support planned in the future</p>
+<h3><a class="header" href="#dumb-phones-ussd" id="dumb-phones-ussd">Dumb Phones: USSD</a></h3>
+<p>For the most simple category of phones we plan support in the future by using a <a href="https://github.com/encointer/encointer-wallet-flutter/issues/130">USSD gateway</a></p>
+<h2><a class="header" href="#usage" id="usage">Usage</a></h2>
+<p>Our preliminary instructions:</p>
+<ul>
+<li><a href="https://encointer.org/wp-content/uploads/2022/05/ENCOINTER-OnboardingInstructions-080522-0709.pdf">Onboarding</a></li>
+<li><a href="https://encointer.org/wp-content/uploads/2022/05/ENCOINTER-BackupandRestoreAccount-230422-1443.pdf">Backup and restore your account</a></li>
+<li><a href="https://encointer.org/wp-content/uploads/2022/05/ENCOINTER-InvitingandEndorsingInstructions-080522-0710.pdf">Inviting and endorsing newcomers</a></li>
+<li><a href="https://encointer.org/wp-content/uploads/2022/05/ENCOINTER-CeremonyInstructions-080522-0708.pdf">Ceremony Instructions: How to collect Community-Issued Income</a></li>
+</ul>
+<h2><a class="header" href="#acknowledgements" id="acknowledgements">Acknowledgements</a></h2>
+<p>Encointer Wallet is based on previous work by <a href="https://polkawallet.io">polkawallet.io</a></p>
+<h1><a class="header" href="#select-community" id="select-community">Select Community</a></h1>
+<p>This section shows you how to select a community on a specific network.</p>
+<h3><a class="header" href="#select-network" id="select-network">Select Network</a></h3>
+<p>By default, the Encointer Wallet App connects to mainnet on Kusama. This is fine for most users and you likely can skip this section. In order to test on our Testnets, you'll need to configure the app to use another network endpoint.</p>
+<ol>
+<li>Enable developer mode: <em>Profile -&gt; tick developer mode checkbox</em></li>
+<li>Tap &quot;Change Network: nctr-k&quot;</li>
+<li>In the left column, tap the desired network:</li>
+</ol>
+<ul>
+<li>NCTR-GSL: Testnet Gesell</li>
+<li>NCTR-R: Testnet Lietaer on Rococo</li>
+<li>NCTR-K: Mainnet on Kusama</li>
+<li>NCTR-GSL-DEV: Local solochain using <code>ws://10.0.2.2:9944</code> for an emulator setup</li>
+</ul>
+<ol start="4">
+<li>Tap on one of your account names (not the identicon)</li>
+<li>Wait until you see a green tick besides <em>(current: nctr-gsl)</em> on the profile page</li>
+<li>Disable developer mode</li>
+</ol>
+<h3><a class="header" href="#select-community-1" id="select-community-1">Select Community</a></h3>
+<p>Once your app is connected to the right network where you registered your new community, you can now switch the app to your community:</p>
+<ol>
+<li>On the top of the home screen, tap the community symbol with your account identicon</li>
+<li>Switch Community -&gt; (+) Add community</li>
+<li>On the world map, browse for your community and tap the pin</li>
+<li>tap again the popped-up name of your community</li>
+</ol>
+<h1><a class="header" href="#register-for-a-ceremony" id="register-for-a-ceremony">Register for a ceremony</a></h1>
+<p>Assuming you have previously</p>
+<ol>
+<li><a href="https://encointer.org/encointer-app/">installed the Encointer Wallet app</a></li>
+<li><a href="./app-select-community.html">selected you community</a></li>
+</ol>
+<p>you can now check when the next ceremony will take place. If you would like to attend the upcoming ceremony, you can tap the <em>register</em> button. You will need a tiny bit of inital funding to pay transaction fees. Either you get community currency from someone in your community, or you get KSM, the native token of the Encointer mainnet on Kusama.</p>
+<p>According to the <a href="./protocol-ceremony-cycle.html">ceremony cycle</a> you will have to await the assigning phase until the app shows you if you have been assigned and when you have to be in which location.</p>
+<p>On the day of the meetup, be on time at the right location and <a href="./app-meetup.html">perform a ceremony meetup</a> with your fellow attendees you will hopefully encounter there.</p>
+<h1><a class="header" href="#perfrom-a-ceremony-meetup" id="perfrom-a-ceremony-meetup">Perfrom a Ceremony Meetup</a></h1>
+<p>Assuming you have previously</p>
+<ol>
+<li><a href="https://encointer.org/encointer-app/">installed the Encointer Wallet app</a></li>
+<li><a href="./app-select-community.html">selected you community</a></li>
+<li><a href="./app-register.html">Registered for the current ceremony</a></li>
+<li>You have been assigned to a meetup</li>
+<li>You are now physically on time in the right location together with a few fellow ceremony attendees</li>
+</ol>
+<h1><a class="header" href="#voting-1" id="voting-1">Voting</a></h1>
+<p>The meetup starts with tapping the button &quot;start meetup&quot; on the Encointer Wallet app home screen.
+As a first human confirmation, you'll have to vote on how many attendees are present, including yourself.</p>
+<p>Once everyone has voted, no further attendees can join. If the group decides to include a latecomer, the entire meetup has to be started from the beginning.</p>
+<h1><a class="header" href="#attesting-personhood" id="attesting-personhood">Attesting Personhood</a></h1>
+<p>After voting on the number of attendees, your app shows a QR code which is your claim of attendance which has to be signed by everyone else to prove your personhood and attendance.</p>
+<h2><a class="header" href="#procedure" id="procedure">Procedure</a></h2>
+<p>The following procedure is just a suggestion, but has shown to cause minimal duration and confusion.</p>
+<ol>
+<li>The group of attendees forms a C-shape and everyone holds the phone upright with the QR code screen  facing to the center to minimize reflections from the sky or the sun</li>
+<li>The person at one end of the C shape starts scanning on after the other and when finished, waits at the other end of the C-shape showing her QR code.</li>
+<li>As soon as the scanning person has successfully scanned the first two attendees, the next outermost attendee can start scanning, but should not overtake the previous scanner</li>
+<li>as soon as everyone has scanned everyone (i.e. scanned 8/8 if the vote was 9 attendees), the meetup can be closed </li>
+</ol>
+<p>Closing the meetup should only be done after confirming that all attendees have scanned everyone.
+After closing the meetup, the app suggests to submit attestations. If you are online, you can directly submit the attestations and ensure you get notified of success. Should you not have internet connection at the time, you can still submit within the following 24h.</p>
+<h2><a class="header" href="#reward-issuance" id="reward-issuance">Reward Issuance</a></h2>
+<p>Ceremony rewards, (AKA community issued income, CII) can be claimed for each performed meetup. The amount of CII is defined per community.</p>
+<p>Your Encointer Wallet app will claim automatically as soon as possible, but you can trigger the process manually. </p>
+<h3><a class="header" href="#immediate-claim" id="immediate-claim">Immediate Claim</a></h3>
+<p>If all attendees are online and were able to submit their attestations, the rewards can be claimed immediately, under the condition that the majority of assignees has show up and has been attested.</p>
+<h3><a class="header" href="#late-claim" id="late-claim">Late Claim</a></h3>
+<p>Should the above not be the case, attendees have to await the beginning of the <a href="./protocol-ceremony-cycle.html#registering">registering phase</a> before claiming their CII.</p>
+<h1><a class="header" href="#social-contract" id="social-contract">Social Contract</a></h1>
+<p>It is up to every community to define what they understand as <em>puntuality</em> and as <em>human</em>. </p>
+<p>Each community is just as strong as their social contract compliance. If you allow latecomers, you may risk to allow them to attend two different meetups and claim a community issued income twice. Same if you allow an attendee to bring and use two or more phones because their friend alledgedly is sick or otherwise incapable of attending. We suggest to apply rather stric rules as this strengthens the trust in your community by its members - and also by members of other communities globally.</p>
+<p>The Encointer protocol has no notion of <em>personhood</em> itself. We expect communities to attribute personhood to all humans, irrespective of age, gender, race, citizenship, sexual identity and preferences, social status, criminal history or any other attributes of identity. </p>
+<h1><a class="header" href="#explorer" id="explorer">Explorer</a></h1>
+<p>The explorer is a Web UI tool to visualize chain data such as the communities and bootstrappers, the phases and ceremonies around the world.
+A working example can be visited at <a href="https://explorer.encointer.org">explorer.encointer.org</a>.</p>
+<p>Checkout the <a href="https://github.com/encointer/explorer">explorer repository</a>. <br>
+In the terminal, go to the the root directory of the repo and enter: <br></p>
+<pre><code class="language-console">git clone https://github.com/encointer/explorer
+cd explorer
+yarn install
+yarn start
+</code></pre>
+<p>Then you should be able to view the explorer in your browser at http://localhost:8000/. <br>
+At the bottom, the registered chain is displayed. You can click on it and change between the local and remote chain.
+You can also set the rpc address via the query paramter, for example: <br>
+<code>localhost:8000?rpc=ws://127.0.0.1:9945</code> will connect to the chain on localhost with port 9945. <br>
+The registered community should be visible in the explorer.</p>
+<h1><a class="header" href="#basic-cli-usage" id="basic-cli-usage">Basic CLI usage</a></h1>
+<p>The Encointer CLI is a low-level tool to interact with an Encointer chain. It allows to query state and to send extrinsics. </p>
+<h2><a class="header" href="#setup" id="setup">Setup</a></h2>
+<p>We suggest you run the following in an Ubuntu 20.04 environment</p>
+<p>Download the CLI for our latest release:</p>
+<pre><code>wget https://github.com/encointer/encointer-node/releases/latest/download/encointer-client-notee
+chmod +x encointer-client-notee
+
+# Testnet Gesell node endpoint
+NURL=wss://gesell.encointer.org
+NPORT=443
+alias nctr-gsl=&quot;./encointer-client-notee -u $NURL -p $NPORT&quot;
+
+# Testnet Lietaer (on Rococo) node endpoint
+NURL=wss://rococo.api.encointer.org
+NPORT=443
+alias nctr-r=&quot;./encointer-client-notee -u $NURL -p $NPORT&quot;
+
+# Encointer Mainnet (on Kusama) endpoint
+NURL=wss://kusama.api.encointer.org
+NPORT=443
+alias nctr-k=&quot;./encointer-client-notee -u $NURL -p $NPORT&quot;
+
+# local dev node
+alias nctr-dev=&quot;./encointer-client-notee&quot;
+</code></pre>
+<p>In the following, we will show usage with testnet Gesell, using our alias <code>nctr-gsl</code>. But You can use any of the aliases above to interact with the other chains in the same way (caveat: deployed versions of the CLI API can vary)</p>
+<h3><a class="header" href="#get-ceremony-phase" id="get-ceremony-phase">Get Ceremony Phase</a></h3>
+<pre><code>nctr-gsl get-phase
+</code></pre>
+<p>This will return any of </p>
+<ul>
+<li><code>Registering</code>: you can register participants, communities, locations </li>
+<li><code>Assigning</code>: ceremony meetup assignments can be queried</li>
+<li><code>Attesting</code>: ceremony meetups can be performed</li>
+</ul>
+<h3><a class="header" href="#list-communities" id="list-communities">List Communities</a></h3>
+<pre><code>nctr-gsl list-communities
+</code></pre>
+<p>will yield something like </p>
+<pre><code>number of communities:  5
+e5dvt5mjcem: bot-tugs locations: 9
+u0qj94fxxJ6: EdisonPaula locations: 3
+srcq45PYNyD: Adriana locations: 5
+u33e0719fDB: Decoded Berlin locations: 3
+69y7j4ZEXmy: Decoded Buenos Aires locations: 8
+</code></pre>
+<p>Each community is shown with</p>
+<ul>
+<li>its community identifier (cid) which is a 11-character string</li>
+<li>its Name, given by community lead</li>
+<li>its number of ceremony meetup locations</li>
+</ul>
+<p>You can also explore communities for our different networks using our <a href="./explorer">explorer</a></p>
+<h3><a class="header" href="#manage-account-keystore" id="manage-account-keystore">Manage Account Keystore</a></h3>
+<p>The CLI offers very basic wallet functionality, managing a keystore in a local subfolder <code>my_keystore</code> where account secrets are stored in plaintext. Do not use in production!</p>
+<h4><a class="header" href="#create-a-new-account" id="create-a-new-account">Create a New Account</a></h4>
+<pre><code>nctr-gsl new-account
+</code></pre>
+<p>The printed result will be your new account address </p>
+<h4><a class="header" href="#list-accounts-in-keystore" id="list-accounts-in-keystore">List Accounts in Keystore</a></h4>
+<pre><code>nctr-gsl list-accounts
+</code></pre>
+<h3><a class="header" href="#query-account-balances" id="query-account-balances">Query Account Balances</a></h3>
+<pre><code>nctr-gsl balance 5CSLXnYZQeVDvNmanYEJn4YXXhgFLKYwp2f216NsDehR8mVU
+</code></pre>
+<p>you can add a cid to query the balance for a specific community</p>
+<pre><code>nctr-gsl balance 5ChwkE8kd2qagyiCikP2Ns2T6vWh7dbURx54gXcPKw8NotNp --cid srcq45PYNyD
+</code></pre>
+<p>or get all balances (first, the native token balance, then all community balances)</p>
+<pre><code>nctr-gsl balance 5ChwkE8kd2qagyiCikP2Ns2T6vWh7dbURx54gXcPKw8NotNp --all
+</code></pre>
+<h3><a class="header" href="#faucet" id="faucet">Faucet</a></h3>
+<p>Testnet Gesell features a faucet, so you can pre-fund your <a href="tutorials-cli.html#create-a-new-account">new account</a></p>
+<pre><code>nctr-gsl faucet &lt;Account&gt;
+</code></pre>
+<h1><a class="header" href="#how-to-register-an-encointer-community-manually" id="how-to-register-an-encointer-community-manually">How to Register an Encointer Community (manually)</a></h1>
+<p>We assume you have <a href="./tutorials-cli.html">set up the CLI client previously</a></p>
+<p>This tutorial will guide you through the process of setting up a new community on any of our <a href="./deployments.html">networks</a></p>
+<p>If you haven't done so, please learn about the <a href="tutorials-register-community.html#TODO">ceremony cycle</a> of the Encointer Protocol</p>
+<h2><a class="header" href="#set-up-bootstrappers" id="set-up-bootstrappers">Set Up Bootstrappers</a></h2>
+<p>As Encointer is all about proof of personhood, you will need people to get started. We suggest to pick 10 diverse, dependable and trustworthy members of your community for a trusted setup. This first group of people performing the very first ceremony of a new community we call <em>Bootstrappers</em>.</p>
+<p>If you want to test all by yourself, we suggest you create 3 bootstrapper accounts using 3 phones and register your community on <a href="./testnet-gesell.html">Testnet Gesell</a>. In the following, we will assume you're just testing yourself, but the process is very similar if the accounts are for real bootstrappers. </p>
+<p>All the bootstrappers need to <a href="https://encointer.org/encointer-app/">install the mobile app</a> and set up a new account. You can then collect all the bootstrapper accounts by sharing them from within the app by going to <em>profile -&gt; tap account -&gt; share account -&gt; send link</em></p>
+<p>The bootstrapper accounts need initial funding. On our testnets, you can use the faucet, on Mainnet, you can supply KSM or any other existing community currency</p>
+<pre><code>nctr-gsl faucet 5D5V3couq7o42FYkLG4vVhaqQPrfk4NT3kWzZJH66ZeHr3iG 5HB4kbo67Hgv846DNMRnt7i1xNMum66LLBFkqtghKsNwRknM 5GxWKwbrPL88uH3Zv7zAiz6ozdpSFHzSfK1aXhVxDcNQYU8t
+</code></pre>
+<p><em>Note: the displayed account addresses will differ from yours when you follow the tutorial. They are just provided for readabiltiy. Use your account addresses instead of the ones used in the tutorial.</em></p>
+<p>To register a community, you need to create a specfile.json containing details about the community and an account with funds to the chain client. </p>
+<h2><a class="header" href="#define-ceremony-meetup-locations" id="define-ceremony-meetup-locations">Define Ceremony Meetup Locations</a></h2>
+<p>We need to define in what region the community shall be issued. For this we use the geojson standard to define a set of meetup places and add some meta-information about the community. You can use <a href="https://geojson.io">geojson.io</a> to select meetup places on a map (define a few &quot;Points&quot;). Make sure that you select places that are &gt;100m apart. You also need to keep this minimal distance from other registered communities. </p>
+<p>If you want to be sure which location will be the bootstrapping location, please specify only a single location and register more locations after the bootstrapping ceremony.</p>
+<p>The number of locations that you should define depends on the size of the population N you'd like to bootstrap. As a rule of thumb, there should be at least N/12 locations but the more locations, the better. </p>
+<h2><a class="header" href="#specfile" id="specfile">Specfile</a></h2>
+<p>The specfile defines the set of <a href="tutorials-register-community.html#set-up-bootstrappers">bootstrappers</a>, the initial set of <a href="tutorials-register-community.html#define-meetup-locations">ceremony locations</a> as well as metadata like name, symbol and icons stored on <a href="https://ipfs.io">IPFS</a>.</p>
+<p>An example of the specfile.json is shown below with one meetup locations:</p>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;community&quot;: {
+    &quot;meta&quot;: {
+      &quot;name&quot;: &quot;Mediterranea&quot;,
+      &quot;symbol&quot;: &quot;MTA&quot;,
+      &quot;assets&quot;: &quot;QmVmew4gZHyCK2Fv4UBgsvfLdf1Q6UiF9MD6wsfPCuNVQp&quot;
+    },
+    &quot;bootstrappers&quot;: [
+      &quot;5D5V3couq7o42FYkLG4vVhaqQPrfk4NT3kWzZJH66ZeHr3iG&quot;,
+      &quot;5HB4kbo67Hgv846DNMRnt7i1xNMum66LLBFkqtghKsNwRknM&quot;,
+      &quot;5GxWKwbrPL88uH3Zv7zAiz6ozdpSFHzSfK1aXhVxDcNQYU8t&quot;
+    ],
+    &quot;demurrage_halving_blocks&quot;: 2628000,
+    &quot;ceremony_income&quot;: 100
+  },
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          -28.102619,
+          31.141935
+        ]
+      },
+      &quot;properties&quot;: {}
+    }
+  ]
+}
+</code></pre>
+<ul>
+<li>replace the account addresses in &quot;bootstrappers&quot; with the ones you have created and add additional meetup locations.</li>
+<li><code>demurrage_halving_blocks</code> of 2'628'000 corresponds to 1 year if block time is 12 seconds</li>
+<li><code>ceremony_income</code> in this example is set to 100.00 MTA</li>
+</ul>
+<blockquote>
+<p><strong>ADVANCED</strong></p>
+<p>ceremony income and demurrage rate are stored as a fixpoint type (I64F64 - or 64 signed integer bits before the decimal point and 64 bit thereafter). That is why the raw numbers in js/apps can be confusing. An income of 100.00 MTA will be represented as</p>
+<pre><code class="language-python">&gt;&gt;&gt; 100*2**64
+1844674407370955161600
+</code></pre>
+<p>demurrage halving blocks will first be translated to an exponential function coefficient:</p>
+<pre><code class="language-python">&gt;&gt;&gt; int(-1*np.log(0.5)*2**64/2628000)
+4865414248555
+</code></pre>
+<p>Applying demmurage of one block then becomes: balance * exp(-demurrage_rate). In the case of a balance of <code>100.0</code> demurrage for one block would decrease the balance to</p>
+<pre><code class="language-python">&gt;&gt;&gt; 100.0*np.exp(-1*4865414248555/2**64)
+99.99997362453999
+</code></pre>
+<p><em>explanatory code is provided in python syntax</em></p>
+</blockquote>
+<h3><a class="header" href="#use-your-own-community-icon" id="use-your-own-community-icon">Use Your Own Community Icon</a></h3>
+<p>The example specfile features a dummy icon. You may want to brand your community with its own icon. You'll need a circular icon in SVG format.</p>
+<p>Place your icon into its own folder, i.e. <code>./leu.rococo/community-icon.svg</code></p>
+<p>Make sure your SVG community icon doesn't include <code>&lt;style&gt;</code> attributes</p>
+<pre><code>cargo install svgcleaner
+svgcleaner community_icon.svg community_icon.svg
+</code></pre>
+<p>Upload the entire folder to ipfs:</p>
+<ol>
+<li>using your own ipfs server</li>
+</ol>
+<pre><code>ipfs add -rw --pin ./leu.rococo
+</code></pre>
+<ol start="2">
+<li>using infura's <a href="https://github.com/INFURA/ipfs-upload-client">client</a>:</li>
+</ol>
+<pre><code>ipfs-upload-client --id &lt;your infura id&gt; --secret &lt;your infura secret&gt; --pin ./leu.rococo 
+</code></pre>
+<p>test if you can fetch the cid through the encointer gateway which will be used by the app</p>
+<pre><code>wget http://ipfs.encointer.org:8080/api/v0/object/get?arg=QmXydp7gdTGwxkCn24vEtvtSXbR7wSAGBDLQpc8buF6T92/community_icon.svg
+</code></pre>
+<p>It may take a while to sync from the server you used for uploading and pinning. IPFS routing isn't very reliable nor fast yet, unfortunately.</p>
+<p>Once you can fetch your icon, replace the IPFS cid in the community specfile with the cid of your icon folder</p>
+<h2><a class="header" href="#register-your-new-community" id="register-your-new-community">Register your new community</a></h2>
+<p>Register your new community with the specfile.json. Signer should be an account in your keystore which is able to pay fees:</p>
+<p><em>caveat: The following step is possible to perform by anyone on out testnet Gesell. 
+But on our mainnet you'll need to pass our <a href="https://trello.com/b/1Yhln6NT/encointer-community-leader-applications">onboarding process</a> to be able to register your new community</em></p>
+<pre><code class="language-bash">nctr-dev new-community specfile.json --signer 5D5V3couq7o42FYkLG4vVhaqQPrfk4NT3kWzZJH66ZeHr3iG
+</code></pre>
+<p>Your community has been registered and the return value is your community-identifier (cid). Let's check the registry again:</p>
+<pre><code class="language-bash">nctr-dev list-communities
+</code></pre>
+<p>Congratulations! You are ready to <a href="./app-select-community.html">select your community in the Encointer Wallet app</a> <a href="./app-meetup.html">perform your first Ceremony</a> with your bootstrappers.</p>
+<h1><a class="header" href="#register-new-meetup-locations" id="register-new-meetup-locations">Register new meetup locations</a></h1>
+<p>Once your community starts to grow, you'll have to make sure there are enough meetup locations. 
+Otherwise less people will be assigned to ceremonies and your community will stall.</p>
+<p>As a rule of thumb, you should always have at least one location for every 8 ceremony participants.</p>
+<h2><a class="header" href="#selecting-locations" id="selecting-locations">selecting locations</a></h2>
+<p>Meetup locations should be selected carefully. They should fulfill the following requirements:</p>
+<h3><a class="header" href="#accessibility" id="accessibility">accessibility</a></h3>
+<p>Locations should be outside and publicly accessible at all times. Also for people in wheelchairs. Moreover, think about how people from around town will travel to a location. </p>
+<h3><a class="header" href="#easy-discoverability" id="easy-discoverability">easy discoverability</a></h3>
+<p>Landmarks like crossroads, squares or monuments are helpful to discover the location if given just a pin on openstreetmaps</p>
+<h3><a class="header" href="#enough-space" id="enough-space">enough space</a></h3>
+<p>Imagine 10 people standing in a circle. That's how much space your location should provide without hindering any traffic</p>
+<h3><a class="header" href="#medium-crowdedness" id="medium-crowdedness">medium crowdedness</a></h3>
+<p>Don't force people to meet at a very secluded or remote place where no other people would ever go. This could frighten participants who are about to meet other people they don't know yet.</p>
+<p>Don't pick very busy locations neither, as this could disturb smooth meetup performance</p>
+<h3><a class="header" href="#shelter" id="shelter">shelter</a></h3>
+<p>In regions where rain is likely, consider picking locations that offer shelter nearby.</p>
+<p>Also, shade is a good feature for hot days. Moreover, bright sunlight may degrade QR code scanning performance</p>
+<h3><a class="header" href="#identity-shaping" id="identity-shaping">identity-shaping</a></h3>
+<p>Think about what your community stands for and consider locations that have a meaning</p>
+<h3><a class="header" href="#close-to-acceptance-points" id="close-to-acceptance-points">close to acceptance points</a></h3>
+<p>What a magic moment if you can attend your first ceremony and spend your income right away in a store nearby!</p>
+<h2><a class="header" href="#specify-locations" id="specify-locations">specify locations</a></h2>
+<p>We assume you have set up your environment along <a href="./tutorials-cli.html">basic cli usage</a>. 
+Like you did when <a href="./tutorials-register-community.html">registering your community</a>, you can use geojson.io to define a geojson file with all the new locations you'd like to register</p>
+<p>Let's define 4 new locations for the Adriana community on Gesell:</p>
+<p>newlocations.json</p>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;FeatureCollection&quot;,
+  &quot;features&quot;: [
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          13.151750564575195,
+          44.67957825832565
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          13.127632141113281,
+          44.680249583587546
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          13.127717971801758,
+          44.69733524402991
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;Feature&quot;,
+      &quot;properties&quot;: {},
+      &quot;geometry&quot;: {
+        &quot;type&quot;: &quot;Point&quot;,
+        &quot;coordinates&quot;: [
+          13.151750564575195,
+          44.69721322146929
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+<h2><a class="header" href="#register-locations" id="register-locations">register locations</a></h2>
+<p>Registering locations is only possible during the <em>registering</em> phase of the <a href="./protocol-ceremony-cycle.html">ceremony cycle</a>. Check the current phase with</p>
+<pre><code>nctr-gsl get-phase
+</code></pre>
+<p>Register locations with</p>
+<pre><code>nctr-gsl add-locations newlocations.json --cid srcq45PYNyD --signer 5D5V3couq7o42FYkLG4vVhaqQPrfk4NT3kWzZJH66ZeHr3iG
+</code></pre>
+<p>You should see <code>encointerCommunities.LocationAdded</code> events for each of your added locations</p>
+<p>If you now visit <a href="https://explorer.encointer.org/?rpc=wss%3A%2F%2Fgesell.encointer.org">explorer.encointer.org</a> you should see the new locations if you zoom the adriatic sea.</p>
+<h2><a class="header" href="#how-to-add-locations-on-mainnet" id="how-to-add-locations-on-mainnet">how to add locations on mainnet</a></h2>
+<p>On Encointer's production network, no single person is allowed to register new locations. At the current state, Encointer council has to approve new communities and locations</p>
+<p>In order to prepare a proposal for council, you can use</p>
+<pre><code>nctr-k add-locations newlocations.json --cid u0qj944rhWE  --dryrun
+</code></pre>
+<p>The <code>--dryrun</code> flag will disable sending the extrinsic but will print the encoded call to <em>stdout</em> instead</p>
+<p>like this:</p>
+<pre><code>0x32020c2800103e017530716a3977f79df70000d0943ad7f8ad2c00000000000000000000000020d9260d000000000000003e017530716a3977f79df700004aa032d624ae2c000000000000000080ffffff7fac200d000000000000003e017530716a3977f79df70000e674039084b22c00000000000000000000000020b2200d000000000000003e017530716a3977f79df70000a68cd0907cb22c00000000000000000000000020d9260d00000000000000cd02
+</code></pre>
+<h1><a class="header" href="#create-vouchers" id="create-vouchers">Create vouchers</a></h1>
+<p>Vouchers are a nice way to spread your community currency. This tutorial will show you how to create unique QR codes and fund them such that the vouchers can be claimed by anymone using the Encointer Wallet app</p>
+<p>We have prepared a <a href="https://github.com/encointer/encointer-node/blob/master/client/voucher.py">very simple python script</a> for you to generate a number of paperwallets and generate QR codes that are understood by the Encointer Wallet app.</p>
+<h2><a class="header" href="#setup-1" id="setup-1">setup</a></h2>
+<pre><code>wget https://github.com/encointer/encointer-node/blob/master/client/voucher.py
+chmod +x voucher.py
+
+pip install pillow qrcode click secrets base58
+</code></pre>
+<h2><a class="header" href="#generate" id="generate">generate</a></h2>
+<pre><code>./voucher.py --network nctr-k --cid u0qj944rhWE --issuer pestalozzi -n 10
+</code></pre>
+<p>this will create a batch of 10 vouchers</p>
+<pre><code>generating QR vouchers for batch_token: RtdpYnvFpkz
+generating voucher 0: //RtdpYnvFpkz/Cpe3M7ai85cRhcqUk9aJx7x2YZJqjMini
+generating voucher 1: //RtdpYnvFpkz/DVXYfVkDPPTdE7pbEUd7ChveApu5ZdoWm
+generating voucher 2: //RtdpYnvFpkz/3RiUvgXSvVKCqVuaL49yANm6WdgXn3Xm9
+generating voucher 3: //RtdpYnvFpkz/GaVVAgvL7Bn4iPStxe6UeKHFtwitVm4nJ
+generating voucher 4: //RtdpYnvFpkz/NRrpFR2sWxzJjHVs86eW67Th8XCfc2xHS
+generating voucher 5: //RtdpYnvFpkz/MgKraRVsE2pTMLL5K9TqnUJ4CJ98R3xb5
+generating voucher 6: //RtdpYnvFpkz/7sGZntwV5jKXVMcZfWnGKpBdjCKTTDCP
+generating voucher 7: //RtdpYnvFpkz/EnU7qpbWjHhYHAr9tSxEhPto6q4wsL7Vv
+generating voucher 8: //RtdpYnvFpkz/BiqKLkevGhF7dLC3XjgAJg7iiYLS8uDQa
+generating voucher 9: //RtdpYnvFpkz/7TMLTVU6wtBF7EJoJkg3jpuTCv19ktATM
+</code></pre>
+<p>The identifiers of these vouchers are private key seeds. do not share them with anyone!</p>
+<p>In your working dir you'll find</p>
+<pre><code>voucher-RtdpYnvFpkz-3RiUvgXSvVKCqVuaL49yANm6WdgXn3Xm9.png
+voucher-RtdpYnvFpkz-7sGZntwV5jKXVMcZfWnGKpBdjCKTTDCP.png
+voucher-RtdpYnvFpkz-7TMLTVU6wtBF7EJoJkg3jpuTCv19ktATM.png
+voucher-RtdpYnvFpkz-BiqKLkevGhF7dLC3XjgAJg7iiYLS8uDQa.png
+voucher-RtdpYnvFpkz-Cpe3M7ai85cRhcqUk9aJx7x2YZJqjMini.png
+voucher-RtdpYnvFpkz-DVXYfVkDPPTdE7pbEUd7ChveApu5ZdoWm.png
+voucher-RtdpYnvFpkz-EnU7qpbWjHhYHAr9tSxEhPto6q4wsL7Vv.png
+voucher-RtdpYnvFpkz-GaVVAgvL7Bn4iPStxe6UeKHFtwitVm4nJ.png
+voucher-RtdpYnvFpkz-MgKraRVsE2pTMLL5K9TqnUJ4CJ98R3xb5.png
+voucher-RtdpYnvFpkz-NRrpFR2sWxzJjHVs86eW67Th8XCfc2xHS.png
+voucher-RtdpYnvFpkz.secrets
+</code></pre>
+<h2><a class="header" href="#funding" id="funding">funding</a></h2>
+<p>You can fund the vouchers one by one using the mobile app. </p>
+<ol>
+<li>select the correct community and sending account in your app</li>
+<li>tap &quot;send&quot; on home screen</li>
+<li>tap scanner symbol and scan one voucher</li>
+<li>send funds</li>
+</ol>
+<h2><a class="header" href="#design-2" id="design-2">design</a></h2>
+<p>You can now design nice vouchers including the QR codes generated. </p>
+<h2><a class="header" href="#auto-config" id="auto-config">auto-config</a></h2>
+<p>One nice features of these vouchers is that they automatically configure the app with the correct network and community upon scanning the QR code. this is especially helpful if using for demos on testnets</p>
+<h1><a class="header" href="#acceptance-point-setup" id="acceptance-point-setup">Acceptance Point Setup</a></h1>
+<p>In order to accept Encointer community currency (CC) at an outlet, the vendor may <a href="https://encointer.org/encointer-app/">set up an account</a> like anyone else. 
+No approval is necessary, anyone can start accepting CC in a matter of minutes.</p>
+<h2><a class="header" href="#security" id="security">security</a></h2>
+<p>Make sure you <a href="https://encointer.org/wp-content/uploads/2022/05/ENCOINTER-BackupandRestoreAccount-230422-1443.pdf">backup</a> your account</p>
+<h3><a class="header" href="#collect-only-setup" id="collect-only-setup">collect-only setup</a></h3>
+<p>Once you have created your store account, it is possible to set up the app as a receiving payment terminal only, 
+such that employees can only collect payments but not transfer funds. If this is what you want, do the following steps on a new device:</p>
+<ol>
+<li>Set up at least one default account</li>
+<li>Profile -&gt; enable developer mode</li>
+<li>Address Book -&gt; (+) add contact</li>
+<li>Enter the public address of your store account, like <em>5EkhjbRksfjG3GjCTveDicmSy2q87eTpNu6fKN8VDAYsKBvk</em></li>
+<li>enter the name of your store, i.e. <em>SuperLocalStore</em></li>
+<li>tick the <em>observation</em> checkbox</li>
+<li>save</li>
+<li>Profile -&gt; disable developer Mode</li>
+<li>Home -&gt; tap logo to select account <em>SuperLocalStore (Observation)</em></li>
+<li>You should now see your store's balance</li>
+<li>tap <em>receive</em> and enter amount</li>
+<li>your client can now scan the QR code and send funds</li>
+</ol>
+<h2><a class="header" href="#qr-code-for-self-service-checkout" id="qr-code-for-self-service-checkout">QR code for self-service checkout</a></h2>
+<p>You can prepare and print QR codes for display. This is useful for self-checkout scenarios where 
+your customers scan and pay without interaction by your personel. Such QR codes act like an unpersonalized invoice, 
+either with a fixed amount or with an undefined amount</p>
+<p>The format for QR code payload is:</p>
+<pre><code>encointer-invoice
+v1.0
+&lt;ACCOUNT&gt;&gt;
+&lt;CID&gt;
+&lt;AMOUNT&gt;
+&lt;LABEL&gt;
+</code></pre>
+<p>So, If we have a fixed-price product for 5.0 Leu, we can print a QR code with the following payload:</p>
+<pre><code>encointer-invoice
+v1.0
+5DkVGErvJLPTgec4C73Xk7boEVTKXJYDuCro2kPHkB3XGARh
+u0qj944rhWE
+5.0
+Encointer Association
+</code></pre>
+<p>Store the above content in <code>payload.txt</code></p>
+<p>On Linux, we can create a QR code using <a href="https://linux.die.net/man/1/qrencode">qrencode</a>. </p>
+<p>Caveat: with the current version we need to make sure there's no newline at the end of the last line. So we just truncate the last byte of the file in the following example command</p>
+<pre><code>head -c -1 payload.txt | qrencode -o test.png
+</code></pre>
+<p>Alternatively, you can use web services that help you generate a QR code, like <a href="https://www.qr-code-generator.com/">this one</a> (select &quot;Text&quot; mode and make sure there's no line at the end)</p>
+<p>Now, you can insert <code>test.png</code> into a design of your choice. For Leu we use <a href="https://leu.zuerich/wp-content/uploads/2022/09/Leu_Steller.pdf">this pdf form</a></p>
+<h1><a class="header" href="#developers" id="developers">Developers</a></h1>
+<p>This chapter includes information for developers who want to test the tech locally on their machines</p>
+<h1><a class="header" href="#gesell-local-setup" id="gesell-local-setup">Gesell local setup</a></h1>
+<p>Note: You can find more detailed instructions on how to build and run the node and cli client on the <a href="https://github.com/encointer/encointer-node">encointer-node repository</a>.</p>
+<h2><a class="header" href="#build-node" id="build-node">Build node</a></h2>
+<p>Clone the <a href="https://github.com/encointer/encointer-node">encointer-node repository</a> and cd into it:</p>
+<pre><code class="language-console">git clone https://github.com/encointer/encointer-node.git
+cd encointer-node
+</code></pre>
+<p>Install Rust: </p>
+<pre><code class="language-console">curl https://sh.rustup.rs -sSf | sh
+</code></pre>
+<p>Build the node:</p>
+<pre><code class="language-console">cargo build --release
+</code></pre>
+<h2><a class="header" href="#launch-gesell-node" id="launch-gesell-node">Launch Gesell node</a></h2>
+<p>Run dev node locally</p>
+<pre><code class="language-console">./target/release/encointer-node-notee --dev --tmp --enable-offchain-indexing true --rpc-methods unsafe
+</code></pre>
+<p><code>--dev</code> sets up a developer node <a href="https://substrate.dev/docs/en/knowledgebase/integrate/chain-spec">chain specification</a> </br>
+<code>--tmp</code> saves all active data for the node (keys, blockchain database, networking info, ...) and is deleted as soon as you properly terminate your node. </br>
+<code>--offchain-indexing</code> is needed for the custom rpc call <code>communities_getAll</code> </br>
+<code>--rpc-methods unsafe</code> is needed for the bazaar's business and offering aggregation rpcs. </br>
+The node is by default listening on port 9944, but you can add the option <code>--ws-port xxxx</code> to configure the node to listen to port xxxx.</p>
+<h2><a class="header" href="#cli-client" id="cli-client">CLI Client</a></h2>
+<p>After the node is running, try out the client (from the root folder of the encointer-node repository):</p>
+<pre><code class="language-console">./target/release/encointer-client-notee -h
+</code></pre>
+<p>This should output all possible client commands. </p>
+<p>If you want to use the client to communicate with the remote chain, add the chain url and specify the port. The following command will get the current phase from the remote chain.</p>
+<pre><code class="language-console">./target/release/encointer-client-notee -u wss://gesell.encointer.org -p 443 get-phase
+</code></pre>
+<h1><a class="header" href="#bot-communities" id="bot-communities">Bot Communities</a></h1>
+<p>Bot communities are helpful to test the Encointer protocol and all the surrounding applications, apps and UI's</p>
+<p>To simplify the registration of a community, a python script was written to wrap up the chain client commands and automate the bootstrapping.
+We will go through the process step by step.</p>
+<p>If you'd rather learn how to register communities manually, visit <a href="developers-bot-communities.html#how-to-register-an-encointer-community-manually">this section</a></p>
+<h2><a class="header" href="#setup-2" id="setup-2">Setup</a></h2>
+<p>install all requirements for the python scripts (you'll need pip3 for that):</p>
+<pre><code class="language-console">apt update
+pip3 install --upgrade pip
+pip3 install randomwords geojson pyproj flask
+</code></pre>
+<h3><a class="header" href="#local-testing" id="local-testing">Local Testing</a></h3>
+<p>Setup the chain and client locally according to the <a href="developers-notee-local-setup.html">local setup</a>. </p>
+<p>Run a faucet. Go to the client folder and run the faucet service in a seperate terminal which will be used to drip funds to the bootstrapping accounts later on:</p>
+<pre><code class="language-console">cd client
+./faucet.py
+</code></pre>
+<p>The faucet service is a flask app which runs on localhost and listens on port 5000 to incoming faucet requests.</p>
+<p>In a local setup, we don't want to wait for the ceremony phase to change in fixed intervals. Instead, we use the <code>phase</code> service to watch extrinsic activity and forward the ceremony phase when the chain blocks are empty for a while indicating idleness.</p>
+<pre><code class="language-console">cd client
+./phase.py
+</code></pre>
+<p>By default, the scripts register your community on the local node listening on websocket port 9944. you can change that by adding the <code>--port 9945</code> argument</p>
+<pre><code>./bot-community.py init
+./bot-community.py benchmark
+</code></pre>
+<p>The benchmark command will watch for ceremony phase to change and act upon the new phase automatically. This command will run forever.</p>
+<h4><a class="header" href="#branding-on-ipfs" id="branding-on-ipfs">Branding on IPFS</a></h4>
+<p>Community branding information is stored on IPFS. You can save the community icons to a IPFS node by passing the <code>-l</code> or <code>--ipfs-local</code> flag to the init function.</p>
+<pre><code>ipfs init
+ipfs daemon
+./bot-community.py --port 9945 init -l
+</code></pre>
+<h4><a class="header" href="#create-dummy-bazaar-businesses-and-offerings-and-save-the-data-on-an-ipfs-node" id="create-dummy-bazaar-businesses-and-offerings-and-save-the-data-on-an-ipfs-node">Create Dummy Bazaar Businesses and Offerings and Save the data on an IPFS node</a></h4>
+<p>After a community is initialized, we can register businesses with offerings on the chain. Run the following script to create and register some random businesses and offerings:</p>
+<pre><code class="language-console">./register-businesses.py -l
+</code></pre>
+<p>You can save the businesses and offerings descriptions on the local IPFS node by passing the -l or --ipfs-local flag to the script. Otherwise, the data will be saved on a remote IPFS node.</p>
+<p>The businesses and offerings are stored in:</p>
+<ul>
+<li>./client/test-data/bazaar/businesses*</li>
+<li>./client/test-data/bazaar/offerings*</li>
+</ul>
+<p>You can check the registered businesses and offerings using the client:</p>
+<pre><code class="language-console">./target/release/encointer-client-notee list-businesses --cid COMMUNITY_IDENTIFIER 
+./target/release/encointer-client-notee list-offerings --cid COMMUNITY_IDENTIFIER 
+</code></pre>
+<p>The business offerings can be obtained with the option <code>--cid</code> and arg <code>Account</code>, which is the owner of the business. In this case we used the account <code>//Alice</code>:</p>
+<pre><code class="language-console">./target/release/encointer-node-notee list-business-offerings --cid COMMUNITY_IDENTIFIER //Alice
+</code></pre>
+<p>Note: the cid option needs to be entered in the base58 format.</p>
+<h3><a class="header" href="#testnet-gesell-bot-communities" id="testnet-gesell-bot-communities">Testnet Gesell Bot Communities</a></h3>
+<p>As community branding must be stored on IPFS, you'll need to specify credentials for a public IPFS gateway to be used to deploy content. For <a href="https://infura.io">Infura</a>, use:</p>
+<pre><code>export IPFS_ADD_URL=https://ipfs.infura.io:5001/api/v0/add
+export IPFS_API_KEY=&lt;project-id:password&gt;
+</code></pre>
+<p>To work with testnet Gesell you need to specify the node-url as follows:</p>
+<pre><code>./bot-community.py --node-url wss://gesell.encointer.org init
+</code></pre>
+<p><em>Note: the port 443 is automatically set when working with a remote chain using <code>wss://</code></em></p>
+<p>On Gesell, ceremony phases change every 10min. In order to continuously grow a bot community, 
+run the following command every 10min</p>
+<pre><code>./bot-community.py --node-url wss://gesell.encointer.org run
+</code></pre>
+<h2><a class="header" href="#explanations" id="explanations">Explanations</a></h2>
+<p>Let's look at what is happening in the init function:</p>
+<ol>
+<li>Bootstrapper accounts are created. They can be seen in the ./my_keystore folder.</li>
+<li>Funds are transfered to the bootstrappers via the faucet. As with other blockchains, funds are necessary in order to pay fees.</li>
+<li>A specfile is created with a community name, a symbol, the icon of the community, the list of bootstrappers and several random meetup locations around a specified point.
+You can see the community specfile in the client folder. It is a geojson file with the name of the community as filename.
+The specfile is needed to register a community.</li>
+<li>A new community is registered by passing the specfile and one of the bootstrappers (with funds) to the &quot;new_community&quot; function.</li>
+</ol>
+<p>Note:</p>
+<ul>
+<li>Make sure, the faucet script is running in the background while running the bot-community script to enable the faucet.</li>
+<li>As you can read in our whitepaper, we'll avoid the faucet as an entry barrier in the future.</li>
+<li>Should the faucet be exhausted, please post a message to our <a href="https://app.element.io/#/room/#encointer:matrix.org">element channel</a> and friendly request some topup. Please be patient.</li>
+</ul>
+<p>To check if a community is registered on the chain, you can use the client with the command &quot;list-communities&quot;:</p>
+<pre><code class="language-console">./target/release/encointer-node-notee list-communities
+</code></pre>
+<p>The benchmark function calls the run function in an infinite loop, where the run function is responsible to handle the specific task depending on the phase.</p>
+<p>At REGISTERING, it registers participants on the chain.
+Additionally to registering participants, bootstrappers can endorse other accounts to speed up registration.
+After participants are registered for a ceremony, the participatns can be verified in a seperate shell by calling:</p>
+<pre><code class="language-bash">./target/release/encointer-node-notee list-participants
+</code></pre>
+<p>At ASSIGNING, the blockchain assigns all participants to randomized groups that will have to meet at a random meetup location at a specific time.
+Participants can learn their assignment with:</p>
+<pre><code class="language-bash">./target/release/encointer-node-notee list-meetups
+</code></pre>
+<p>At ATTESTING, the run function performs the meetup by getting each participants claims and attesting eachother.</p>
+<p>To know in what phase the chain is, you can call:</p>
+<pre><code class="language-bash">./target/release/encointer-node-notee get-phase
+</code></pre>
+<p>You should see either REGISTERING, ASSIGNING or ATTESTING.</p>
+<p>A phase is ~10 min long so one whole cycle is 30 min. You can jump to the next phase on the local chain by running:</p>
+<pre><code class="language-bash">./target/release/encointer-node-notee next-phase
+</code></pre>
+<p>Another way is to run the phase script in a seperate shell which switches phase every 10 blocks. You can add the option: --node_url wss://gesell.encointer.org to the phase script if you are working with the remote chain.</p>
+<p>To define in what region the community shall be issued, we use the geojson standard to define a set of meetup places and add some meta-information about the community. You can use geojson.io to select meetup places on a map (define a few &quot;Points&quot;). Make sure that you select places that are &gt;100m apart. You also need to keep this minimal distance from other registered communities.</p>
+<p>The number of locations that you should define depends on the size of the population N you'd like to bootstrap. As a rule of thumb, there should be at least N locations in order to guarantee reasonable randomization. As a maximum of 12 people can attend the same meetup the hard lower limit is N/12.</p>
+<p>Every local community needs a trusted setup. A trustworthy group of 3-12 local people will hold the bootstrapping ceremony publicly. These bootstrappers need to be defined in the metadata block of the specfile.</p>
+<p>At every subsequent ceremony you can add a few participants more but it is important to maintain reputation. At least 3/4 of all participants need to have attended the previous ceremony. So you can only grow your population at a pace that allows to build reputation.</p>
+<p>An encointer ceremony happens at high sun on the same day all over the world. This way, no single person can attend more than one meetup. At each meetup, participants attest each others personhood. For this testnet, however, we don't care about real time or physical presence as we're testing with bot communities. See <a href="./deployments.html#time-warping-for-testnets">Time Warping</a> to learn how the timing maps between mainnet and Gesell.</p>
+<p>Your new community has a very special property called <a href="./economics-demurrage.html">demurrage</a>. This means that the nominal value of your holdings decreases over time. Currently it is halving every year. You can observe this by waiting for a few blocks and checking your balance again. Think of this demurrage like a solidarity fee that you pay to the decentralized &quot;state&quot; that takes care of redistributing wealth among the local population at every ceremony as newly issued basic income.</p>
+<h2><a class="header" href="#see-activity-in-explorer" id="see-activity-in-explorer">See Activity in Explorer</a></h2>
+<p>Visit explorer.encointer.org to observe the growth of the community or run the explorer locally according to the <a href="./explorer">explorer</a> section.</p>
+<h2><a class="header" href="#browse-bazaar-businesses-and-offernings" id="browse-bazaar-businesses-and-offernings">Browse Bazaar Businesses and Offernings</a></h2>
+<p>See <a href="https://github.com/encointer/bazaar-web">Bazaar-web</a> repo and follow README to launch a web service that lists all businesses and offerings for a specified community</p>
+<h1><a class="header" href="#gesell-local-dockerized-benchmark" id="gesell-local-dockerized-benchmark">Gesell local dockerized benchmark</a></h1>
+<p>Follow the instruction on <a href="https://hub.docker.com/r/nomelc/encointer-notee">docker-tutorial</a> to get the docker image and required yml files.</p>
+<h2><a class="header" href="#launch-local-docker-environment-with-gesell-node-and-comminities" id="launch-local-docker-environment-with-gesell-node-and-comminities">Launch local docker environment with Gesell node and comminities</a></h2>
+<p>After the docker-compose file is set-up, you can start the docker containers with </p>
+<pre><code class="language-console">docker-compose up -d
+</code></pre>
+<p>This will start a gesell node, 3 bot communities that will grow, a faucet script to ensure funds for transactions and a phase shifting script that changes every 10 blocks to the next phase (REGISTERING, ASSIGNING, ATTESTING).</p>
+<h2><a class="header" href="#watch-communities-grow-on-explorer" id="watch-communities-grow-on-explorer">Watch communities grow on explorer</a></h2>
+<p>Open up explorer.encointer.org in your browser and configure the node to be your dockerized gesell node with the predefined port. <br>
+Alternatively, you can also start your local explorer as shown in the <a href="./explorer">explorer</a> section.</p>
+<h2><a class="header" href="#watch-performance-metrics-prometheusgrafana" id="watch-performance-metrics-prometheusgrafana">Watch performance metrics (prometheus/grafana)</a></h2>
+<p>According to the <a href="https://hub.docker.com/r/nomelc/encointer-notee">docker-tutorial</a>, grafana and prometheus should be set-up. 
+Now, visit localhost:3000 and view the preformance metrics in your dashboard.</p>
+<h1><a class="header" href="#local-teeproxy-setup" id="local-teeproxy-setup">Local TEEproxy setup</a></h1>
+<p>TEEproxy is the variant of Encointer that protects privacy. It has been deployed to <a href="testnet-cantillon.html">testnet Cantillon</a></p>
+<p>You can run an entire Demo locally on any properly set up SGX machine. This is for advanced users or developers. The instructions assume that you are able to build substrate blockchains.
+If you do not have an SGX machine to test, please check our <a href="developers-teeproxy-local.html#docker-demo">dockerized demo in SW mode</a></p>
+<h3><a class="header" href="#build-client-and-worker" id="build-client-and-worker">Build client and worker</a></h3>
+<p>along the <a href="https://www.substratee.com/howto_worker.html">substraTEE-worker instructions</a>. With the following differences:</p>
+<pre><code class="language-console">git clone https://github.com/encointer/encointer-worker.git
+cd encointer-worker
+./ci/install-rust.sh
+make
+</code></pre>
+<p>Because the enclave cannot yet be built deterministically, you'll have to use our build if you intend to serve the same shards that we do (feel free to start new currencies on your own shard with different MRENCLAVE, but you won't be able to process the state of our/other shards):</p>
+<pre><code>cd bin
+wget https://github.com/encointer/encointer-worker/releases/download/v0.6.12-sub2.0.0/enclave-0.6.12.signed.so
+rm enclave.signed.so
+ln -s enclave-0.6.12-devsgx02.signed.so enclave.signed.so
+</code></pre>
+<p>Moreover, you will need to provision secrets (the <em>shielding key</em> and the <em>state encryption key</em>) to the enclave. In the future, this will be done by workers automatically mutually, as demonstrated in <a href="https://www.substratee.com/design.html#redundancy-m3-onwards">SubstraTEE M3</a>.</p>
+<pre><code># still inside ./bin
+# get our symmetric state encryption key
+wget https://github.com/encointer/encointer-worker/releases/download/v0.6.10-sub2.0.0-alpha.7/aes_key_sealed.bin
+# get our RSA shielding key
+wget https://github.com/encointer/encointer-worker/releases/download/v0.6.10-sub2.0.0-alpha.7/rsa3072_key_sealed.bin
+</code></pre>
+<h3><a class="header" href="#build-node-1" id="build-node-1">Build node</a></h3>
+<p>along the <a href="https://www.substratee.com/howto_node.html#build">substraTEE-node instructions</a>. With the following differences:</p>
+<pre><code class="language-console">git clone https://github.com/encointer/encointer-node.git
+cd encointer-node
+git checkout sgx-master
+cargo build --release
+</code></pre>
+<p>Run dev node locally</p>
+<pre><code class="language-console">..encointer-node# ./target/release/encointer-node-teeproxy --dev --ws-port 9979
+</code></pre>
+<p>Run dev worker with a few insightful logs locally</p>
+<pre><code class="language-bash">cd encointer-worker/bin
+./encointer-worker init-shard
+./encointer-worker shielding-key
+./encointer-worker signing-key
+export RUST_LOG=info,substrate_api_client=warn,sp_io=warn,ws=warn,encointer_worker=info,substratee_worker_enclave=debug,sp_io::misc=debug,runtime=debug,substratee_worker_enclave::state=warn,substratee_stf::sgx=debug
+./encointer-worker -p 9979 run
+</code></pre>
+<h2><a class="header" href="#docker-demo" id="docker-demo">Docker Demo</a></h2>
+<p>To avoid the need for an SGX machine, we provide a dockerized demo in SW mode as well (with emulated SGX)</p>
+<pre><code>mkdir test
+cd test
+docker pull scssubstratee/substratee_dev:1804-2.12-1.1.3-001
+
+docker run -it -v $(pwd):/root/work -p 9979:9944 -p 2079:2000 -p 3079:3443 scssubstratee/substratee_dev:1804-2.12-1.1.3-001 /bin/bash
+
+cd work
+</code></pre>
+<p>Please observe that we are mapping the api ports to the host system. this way, you can expose the encointer demo to your home network and access it with our <a href="./app.html">mobile app</a> too.</p>
+<p>We suggest to use tmux in docker to split your docker bash into 3 terminals. minimal cheatsheet:</p>
+<ul>
+<li><code>Ctrl-B &quot;</code> to split into one more terminal</li>
+<li><code>Ctrl-B &lt;arrows&gt;</code> to switch focus to another terminal</li>
+<li><code>Ctrl-B d</code> detatch session. re-attach with <code>tmux a</code></li>
+</ul>
+<h3><a class="header" href="#building" id="building">building</a></h3>
+<p>in terminal 1 do</p>
+<pre><code>git clone https://github.com/encointer/encointer-node.git
+cd encointer-node
+git checkout sgx-master
+cargo build --release
+export RUST_LOG=INFO,parity_ws=WARN,encointer=debug
+./target/release/encointer-node-teeproxy --dev --ws-external -lencointer=debug,runtime=debug
+</code></pre>
+<p>Your chain should now start producing blocks.</p>
+<p>in terminal 2 do</p>
+<pre><code>git clone https://github.com/encointer/encointer-worker.git
+cd encointer-worker
+SGX_MODE=SW make
+cd bin
+./encointer-worker signing-key
+./encointer-worker shielding-key
+./encointer-worker init-shard
+./encointer-worker mrenclave &gt; ~/mrenclave.b58
+export RUST_LOG=debug,substrate_api_client=warn,sp_io=warn,ws=warn,encointer_worker=info,substratee_worker_enclave=info,sp_io::misc=debug,runtime=debug,substratee_worker_enclave::state=warn,substratee_stf::sgx=info,chain_relay=warn,rustls=warn,encointer=debug
+touch spid.txt key.txt
+./encointer-worker --ws-external run --skip-ra 
+</code></pre>
+<p>Your worker should sync blocks now.</p>
+<p>Now you have a running local Encointer system.</p>
+<h3><a class="header" href="#run-a-bot-community" id="run-a-bot-community">run a bot community</a></h3>
+<p>in terminal 3 do</p>
+<pre><code class="language-console">cd encointer-worker/client/
+MRENCLAVE=$(cat ~/mrenclave.b58)
+nano bot-community.py
+</code></pre>
+<p>now edit the following lines to match your setup</p>
+<pre><code>cli = [&quot;./encointer-client&quot;]
+...
+MRENCLAVE = &quot;&lt;your mrenclave here&gt;&quot;
+</code></pre>
+<p>save and exit with Ctrl-X</p>
+<pre><code class="language-console">apt update
+apt install python3-geojson python3-pyproj
+./bot-community.py init
+./bot-community.py benchmark
+</code></pre>
+<p>now you can see how your bots register for ceremonies and get a UBI. More and more bots join the community for every ceremony.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

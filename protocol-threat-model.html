@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Threat Model - </title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded affix "><a href="introduction.html">Introduction</a></li><li class="expanded "><a href="economics.html"><strong aria-hidden="true">1.</strong> Economics</a></li><li><ol class="section"><li class="expanded "><a href="economics-cantillon.html"><strong aria-hidden="true">1.1.</strong> The Cantillon Effect</a></li><li class="expanded "><a href="economics-ubi.html"><strong aria-hidden="true">1.2.</strong> Universal Basic Income</a></li><li class="expanded "><a href="economics-demurrage.html"><strong aria-hidden="true">1.3.</strong> Demurrage</a></li><li class="expanded "><a href="economics-local-currencies.html"><strong aria-hidden="true">1.4.</strong> Local Currencies</a></li><li class="expanded "><a href="economics-interest.html"><strong aria-hidden="true">1.5.</strong> On Saving, Loans and Interest</a></li></ol></li><li class="expanded "><a href="ssi.html"><strong aria-hidden="true">2.</strong> Self-Sovereign Identity</a></li><li class="expanded "><a href="protocol.html"><strong aria-hidden="true">3.</strong> The Encointer Protocol</a></li><li><ol class="section"><li class="expanded "><a href="protocol-ceremony-cycle.html"><strong aria-hidden="true">3.1.</strong> Ceremony Cycle</a></li><li class="expanded "><a href="protocol-reputation.html"><strong aria-hidden="true">3.2.</strong> Reputation</a></li><li class="expanded "><a href="protocol-cid.html"><strong aria-hidden="true">3.3.</strong> Community Identifiers</a></li><li class="expanded "><a href="protocol-democracy.html"><strong aria-hidden="true">3.4.</strong> Democracy</a></li><li class="expanded "><a href="protocol-threat-model.html" class="active"><strong aria-hidden="true">3.5.</strong> Threat Model</a></li></ol></li><li class="expanded "><a href="decentralization.html"><strong aria-hidden="true">4.</strong> Decentralization</a></li><li><ol class="section"><li class="expanded "><a href="decentralization-governance.html"><strong aria-hidden="true">4.1.</strong> Governance</a></li></ol></li><li class="expanded "><a href="deployments.html"><strong aria-hidden="true">5.</strong> Deployments</a></li><li><ol class="section"><li class="expanded "><a href="testnet-gesell.html"><strong aria-hidden="true">5.1.</strong> Gesell</a></li><li class="expanded "><a href="testnet-cantillon.html"><strong aria-hidden="true">5.2.</strong> Cantillon</a></li><li class="expanded "><a href="parachain-kusama.html"><strong aria-hidden="true">5.3.</strong> Encointer Kusama Parachain</a></li></ol></li><li class="expanded "><a href="bazaar.html"><strong aria-hidden="true">6.</strong> Bazaar</a></li><li class="expanded "><a href="app.html"><strong aria-hidden="true">7.</strong> App</a></li><li><ol class="section"><li class="expanded "><a href="app-select-community.html"><strong aria-hidden="true">7.1.</strong> Select Community</a></li><li class="expanded "><a href="app-register.html"><strong aria-hidden="true">7.2.</strong> Register for a ceremony</a></li><li class="expanded "><a href="app-meetup.html"><strong aria-hidden="true">7.3.</strong> Perfrom a Ceremony Meetup</a></li></ol></li><li class="expanded "><a href="explorer.html"><strong aria-hidden="true">8.</strong> Explorer</a></li><li class="expanded "><a href="tutorials.html"><strong aria-hidden="true">9.</strong> Tutorials</a></li><li><ol class="section"><li class="expanded "><a href="tutorials-cli.html"><strong aria-hidden="true">9.1.</strong> Basic CLI usage</a></li><li class="expanded "><a href="tutorials-register-community.html"><strong aria-hidden="true">9.2.</strong> Register a New Community Manually</a></li><li class="expanded "><a href="tutorials-register-locations.html"><strong aria-hidden="true">9.3.</strong> Register new meetup locations</a></li><li class="expanded "><a href="tutorials-vouchers.html"><strong aria-hidden="true">9.4.</strong> Create vouchers</a></li><li class="expanded "><a href="tutorials-acceptance-point.html"><strong aria-hidden="true">9.5.</strong> Acceptance Point Setup</a></li></ol></li><li class="expanded "><a href="developers.html"><strong aria-hidden="true">10.</strong> Developers</a></li><li><ol class="section"><li class="expanded "><a href="developers-notee-local-setup.html"><strong aria-hidden="true">10.1.</strong> Local notee Setup</a></li><li class="expanded "><a href="developers-bot-communities.html"><strong aria-hidden="true">10.2.</strong> Bot Communities</a></li><li class="expanded "><a href="developers-notee-multi-community-growth-benchmark.html"><strong aria-hidden="true">10.3.</strong> Benchmark Multi-Community Growth</a></li><li class="expanded "><a href="developers-teeproxy-local.html"><strong aria-hidden="true">10.4.</strong> Local TEEproxy setup</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#threat-model" id="threat-model">Threat Model</a></h1>
+<h2><a class="header" href="#actor-profiles" id="actor-profiles">Actor Profiles</a></h2>
+<p>We categorize users into the following psychological profiles for later scenario analysis:</p>
+<h3><a class="header" href="#honest-img-srcfigemoji_innocent_1f607svg-width64" id="honest-img-srcfigemoji_innocent_1f607svg-width64">Honest <img src=./fig/emoji_innocent_1F607.svg width=64></a></h3>
+<p>Will comply with the rules</p>
+<h3><a class="header" href="#greedy-img-srcfigemoji_devil_1f47fsvg-width64" id="greedy-img-srcfigemoji_devil_1f47fsvg-width64">Greedy <img src=./fig/emoji_devil_1F47F.svg width=64></a></h3>
+<p>Will try to cheat the system for his/her own benefit. Will collude with others</p>
+<p>Strategies:</p>
+<ul>
+<li>Get reward without showing up</li>
+<li>Sign sybil id's to collect more rewards</li>
+</ul>
+<h3><a class="header" href="#saboteur-img-srcfigemoji_angry_1f621svg-width64" id="saboteur-img-srcfigemoji_angry_1f621svg-width64">Saboteur <img src=./fig/emoji_angry_1F621.svg width=64></a></h3>
+<p>Will try to hurt the system, even if this comes at a cost. Will collude with others</p>
+<p>Strategies:</p>
+<ul>
+<li>turn meetups invalid</li>
+<li>demoralize other participants by preventing them to get reward</li>
+</ul>
+<h2><a class="header" href="#more-roles" id="more-roles">More Roles</a></h2>
+<h3><a class="header" href="#sybil-img-srcfigemoji_alien_1f47dsvg-width64" id="sybil-img-srcfigemoji_alien_1f47dsvg-width64">Sybil <img src=./fig/emoji_alien_1F47D.svg width=64></a></h3>
+<p>An identity that has no bijectively exclusive relationship with a participant. It can however have a bijectively exclusive relationship with a person who doesn't attend any meetup.</p>
+<h3><a class="header" href="#manipulable-img-srcfigemoji_hearts_1f970svg-width64" id="manipulable-img-srcfigemoji_hearts_1f970svg-width64">Manipulable <img src=./fig/emoji_hearts_1F970.svg width=64></a></h3>
+<p>An honest person that can be convinced to break the rules by social pressure. Will not strive for economic benefit.</p>
+<h2><a class="header" href="#collusion-organizations" id="collusion-organizations">Collusion Organizations</a></h2>
+<h3><a class="header" href="#evilcorp" id="evilcorp">evil.corp</a></h3>
+<p>An organization of the greedy or saboteur participants. </p>
+<p>Strategies: </p>
+<ul>
+<li>undermining randomization by sharing information and key pairs to allow collusion attacks at meetups</li>
+</ul>
+<h1><a class="header" href="#assumptions" id="assumptions">Assumptions</a></h1>
+<p>We assume </p>
+<ol>
+<li>The majority of ceremony participants with reputation sending their signed claims to the blockchain location is honest.</li>
+</ol>
+<p><em>Reputation</em> here means having attended at least one of the last two ceremonies and having been rewarded.</p>
+<h1><a class="header" href="#rule-design" id="rule-design">Rule Design</a></h1>
+<p>When designing rules there's a tradeoff beween preventing either the greedy or the saboteur's success. We can introduce very restrictive rules that will successfully prevent sybil attacks by the greedy, but these will make it very easy for the saboteur to demoralize participants by turning meetups invalid deliberately.</p>
+<h2><a class="header" href="#rules" id="rules">Rules</a></h2>
+<p>TODO: This is work in progress....</p>
+<h3><a class="header" href="#meetup-assignment" id="meetup-assignment">Meetup Assignment</a></h3>
+<ol>
+<li>A meetup has at least <font color="green">3</font> assigned participants</li>
+<li>A meetup has at most <font color="green">12</font> assigned participants</li>
+<li>Only <font color="green">1/4</font> of assigned participants may have zero reputation (be newcomers)
+<ul>
+<li><em>this rule directly impacts the maximum adoption rate. A population of 1M will take at least</em> log(1M/12)/log(4/3) &lt;= 40 ceremonies </li>
+</ul>
+</li>
+</ol>
+<h3><a class="header" href="#meetup-validation" id="meetup-validation">Meetup validation</a></h3>
+<ol>
+<li>(NEEDED?) The signature <a href="https://en.wikipedia.org/wiki/Reciprocity_(network_science)">reciprocity</a> is at least <font color="green">X</font></li>
+<li>(NEEDED?) The reciprocal edge connectedness is at least M-2, where M is the number of participants with at least one signature by another party.</li>
+<li>(OK) At least <font color="green">two</font> participants signed each other mutually</li>
+<li>(OK) Disqualify a participant if her vote is not equal to the number of participants signed by her.</li>
+</ol>
+<h3><a class="header" href="#ubireward-issuance" id="ubireward-issuance">UBI/Reward Issuance</a></h3>
+<p>In order to receive a UBI, a participant </p>
+<ol>
+<li>(OK) must be registered and assigned to the meetup</li>
+<li>(OK) the meetup must be valid</li>
+<li>(TODO: ARGUE THRESHOLD) must have her claim signed by at least <font color="green">1/3</font> of registered participants</li>
+<li>(OK) must have signed the participants that are necessary to fulfill rule above in return</li>
+</ol>
+<h1><a class="header" href="#remote-attacks" id="remote-attacks">Remote Attacks</a></h1>
+<h2><a class="header" href="#flooding-attack" id="flooding-attack">Flooding Attack</a></h2>
+<p>An adversary could register large numbers of fake participants who will never show up. This could prevent legit persons to participate.</p>
+<p>Mitigation: </p>
+<ul>
+<li>Limit the number of assigned participants with no reputation</li>
+</ul>
+<h1><a class="header" href="#non-protocol-threats" id="non-protocol-threats">Non-Protocol Threats</a></h1>
+<h2><a class="header" href="#aggression-detention" id="aggression-detention">Aggression, Detention</a></h2>
+<p>If meetup locations are publicly known, participants could face aggression from saboteurs or they could be detained if participation is suddenly judged illegal.</p>
+<p>Mitigation: </p>
+<ul>
+<li>The set of possible meetup locations has to be significantly larger than the need in order to host all participants.</li>
+</ul>
+<h2><a class="header" href="#abduction" id="abduction">Abduction</a></h2>
+<p>If celebrity meetup participants can be linked to their names and meetup locations in advance, they might get kidnapped</p>
+<p>Mitigation: </p>
+<ul>
+<li>Make sure meetup assignments are kept confidential at least until the meetup has passed.</li>
+</ul>
+<h1><a class="header" href="#behavioural-meetup-scenario-analysis" id="behavioural-meetup-scenario-analysis">Behavioural Meetup Scenario Analysis</a></h1>
+<p>The scenario analysis is structured by the number of participants who were assigned to a meetup</p>
+<h2><a class="header" href="#3-registered-participants" id="3-registered-participants">3 Registered Participants</a></h2>
+<h3><a class="header" href="#happy-flow" id="happy-flow">Happy Flow</a></h3>
+<p>All participants only sign for persons present at meetup location. </p>
+<p><img src="./fig/meetup_3r_3i.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>Noshow of one is treated with mercy for attendees</p>
+<p><img src="./fig/meetup_3r_2i1s_1noshow.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 1
+</code></pre>
+<h3><a class="header" href="#attacks" id="attacks">Attacks</a></h3>
+<h4><a class="header" href="#social-engineering" id="social-engineering">Social Engineering</a></h4>
+<p>Adversary B talks A into signing his sybil ID</p>
+<p><img src="./fig/meetup_3r_1m1d1a.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>As there is no honest participant in this meetup, this attack is out of scope of our threat model.</p>
+<p>Mitigation</p>
+<ul>
+<li>randomized meetups should reduce the chance that someone could be assigned with his sybil to the same meetup. In weakly populated areas, this can happen easily though</li>
+</ul>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h4><a class="header" href="#exclusion" id="exclusion">Exclusion</a></h4>
+<p>Adversary B refuses to sign A and signs C instead</p>
+<p><img src="./fig/meetup_3r_1i1d1a.svg" alt="" /></p>
+<p>A variant of this would be that B isn't even present at the meetup</p>
+<pre><code>reciprocity = 0.5 (1.0)
+reciprocal edge connectedness = 1
+</code></pre>
+<p>Mitigation <strong>none</strong></p>
+<ul>
+<li>randomized meetups should reduce the chance that someone could be assigned with his sybil to the same meetup. In weakly populated areas, this can happen easily though. evil.corp could also increase chances.</li>
+<li>Only allow meetups with more participants (&gt;=4?) in order to reduce the impact of a single participant on outcome.</li>
+</ul>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h2><a class="header" href="#4-registered-participants" id="4-registered-participants">4 Registered Participants</a></h2>
+<h3><a class="header" href="#oversigning" id="oversigning">Oversigning</a></h3>
+<p><img src="./fig/meetup_4r_1i2d1a.svg" alt="" /></p>
+<p>Variant:</p>
+<ul>
+<li>B and C are not present at meetup, removing the reciprocal edges to A</li>
+</ul>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 2
+</code></pre>
+<p>Mitigation: </p>
+<ol>
+<li>(NOK) Introduce <strong>Reputation</strong> (previous attendance to successful meetups)</li>
+<li>(NOK) Introduce Rule <em>&quot;lowest vote with reputation wins&quot;</em>
+* This rule, however, will cause B, C, and D to vote &quot;3&quot; showups and to refuse to sign A. Reputation doesn't help because B and C could have reputation as well.</li>
+<li>(NEEDED?) quarantine non-consistent meetups</li>
+</ol>
+<p>At this meetup, 3/4 of registered participants are malicious.</p>
+<p><em>this scenario violates threat model assumptions</em></p>
+<h3><a class="header" href="#oversigning-light" id="oversigning-light">Oversigning light</a></h3>
+<p><img src="./fig/meetup_4r_2i1d_1a.svg" alt="" /></p>
+<pre><code>reciprocity = 1.0
+reciprocal edge connectedness = 1
+</code></pre>
+<p>Mitigation</p>
+<ul>
+<li>only accept subgraph with recipr. edge connectedness of M-2 for M=4 here. This will cut off D.</li>
+</ul>
+<h3><a class="header" href="#location-spoofing" id="location-spoofing">Location Spoofing</a></h3>
+<p><img src="./fig/meetup_4r_2i1d1a.svg" alt="" /></p>
+<p>C and D could pretend to be at the meetup location. The ceremony validation has no way to know if A-B is legit or C-D.</p>
+<p>Variants:</p>
+<ul>
+<li>D could be a real person colluding with C</li>
+</ul>
+<p>Probability:</p>
+<ul>
+<li>low because of randomization if number of meetups assigned is high
+<ul>
+<li>evil.corp could redistribute sybil id's after meeting assignments, undermining randomization</li>
+</ul>
+</li>
+</ul>
+<p>Mitigation: </p>
+<ol>
+<li>(NOK) track participant locations and require plausible movement trajectories before meetup. <strong>not sound</strong> because it is easy for C+D to spoof realistic trajectories</li>
+<li>(NEEDED?) Quarantine: The validator can detect that the meetup is split and therefore not consistent. Issuance could be conditional to future ceremony attendance</li>
+<li>(OK) The pair with higher reputation wins, the other doesn't get a reward issued.</li>
+<li>(NOK) invalidate non-consistent meetups, preventing 2 illegit rewards while demoralizing 2 honest participants.</li>
+</ol>
+<p>At this meetup, 1/2 of registered participants are malicious.</p>
+<h2><a class="header" href="#5-registered-participants" id="5-registered-participants">5 Registered Participants</a></h2>
+<p><img src="./fig/meetup_5r_2i1d_2a.svg" alt="" /></p>
+<p>Mitigation:</p>
+<ul>
+<li>Disqualify participant if vote != number of peers she signed</li>
+</ul>
+<p><img src="./fig/meetup_5r_2i_1d2a.svg" alt="" /></p>
+<p>Mitigation:</p>
+<ul>
+<li><em>none</em>, if C,E,D all have reputation. the majority can always win. </li>
+</ul>
+<p><em>This violates threat model assumption 1</em></p>
+<h1><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h1>
+<p>As long as the threat model assumptions are held, we can find a set of rules that prevents:</p>
+<ul>
+<li>issuing more rewards than there are honest participants (while there is no guarantee that every honest participant will get a reward in face of malicious behaviour)</li>
+</ul>
+<p>The probability that you as a participant experience a meetup with evil majority follows the poisson cumulative distribution function:</p>
+<p>Given the overall proportion of malicious actors , the probability that you (being an honest actor) will suffer from malicious behaviour at one specific meetup depending on the number of participants in your meetup <em>n</em> is</p>
+<p><a href="./fig/probability_of_malicious_majority.m">code</a>
+<img src="./fig/probability_of_malicious_majority.svg" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="protocol-democracy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="decentralization.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="protocol-democracy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="decentralization.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
