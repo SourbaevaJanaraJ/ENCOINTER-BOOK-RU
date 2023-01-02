@@ -1,0 +1,9 @@
+[ENCOINTER-BOOK-RU]
+authors = ["Alain Brenzikofer"]
+language = ["en", "ru"]
+multilingual = true
+src = "src"
+title = "The Encointer Book"
+
+[output.html]
+mathjax-support = true
